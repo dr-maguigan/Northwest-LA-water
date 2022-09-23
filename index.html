@@ -212,11 +212,20 @@ body {
         			}
       			]
     			};
-
+			
+			var geojsonMarkerOptions = {
+    				radius: 3,
+    				fillColor: "#ffffff",
+    				color: "#000",
+    				weight: 1,
+    				opacity: 1,
+    				fillOpacity: 0.8
+			
 			var layerGroup = L.geoJSON(data, {
   				onEachFeature: function (feature, layer) {
-    				layer.bindPopup('<h1>'+feature.properties.f1+'</h1><p>'+feature.properties.f2+'</p>');
-  				}
+    				layer.bindPopup('<h1>'+feature.properties.f1+'</h1><p>'+feature.properties.f2+'</p>');{
+  				return L.circleMarker(latlng, geojsonMarkerOptions);
+    				}
 			}).addTo(map);
 		
 </script>
