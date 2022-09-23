@@ -198,7 +198,7 @@ body {
     				}
 			}
 
-			var geojsonFeature = {
+			var wells = [{
     				"type": "Feature",
     				"properties": {
         				"popupContent": "Walter B. Jacobs Park: 193.47"
@@ -206,10 +206,29 @@ body {
     				"geometry": {
         				"type": "Point",
         				"coordinates": [-93.93314, 32.56717]
-				}
-			};
+				},
+				
+				{
+    				"type": "Feature",
+    				"properties": {
+        				"popupContent": "Hannah's Park: 141.62"
+    				},
+    				"geometry": {
+        				"type": "Point",
+        				"coordinates": [-93.6911, 32.35892]
+				},
+				{
+    				"type": "Feature",
+    				"properties": {
+        				"popupContent": "Mayo Rd: 119.16"
+    				},
+    				"geometry": {
+        				"type": "Point",
+        				"coordinates": [-93.74217, 32.37806]
+				},
+			}];
 
-			L.geoJSON(geojsonFeature, {
+			L.geoJSON(wells, {
     				onEachFeature: onEachFeature
 			}).addTo(map);
 		
