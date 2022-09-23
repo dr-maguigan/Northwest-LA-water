@@ -191,6 +191,33 @@ body {
 			L.geoJSON(sparta, {
     				style: spartastyle
 				}).addTo(map);
+		
+			var data ={
+      				"type": "FeatureCollection",
+      				"features": [
+        			{
+          			"type": "Feature",
+          			"geometry": {
+            			"type": "Point",
+            			"coordinates": [
+              				32.56717,
+              				-93.93314
+            				]
+          			},
+          			"properties": {
+            			"f1": "Walter B. Jacobs Park",
+            			"f2": "Last Reading: 193.47"
+          			}
+        		}
+      			]
+    			};
+
+			var layerGroup = L.geoJSON(data, {
+  				onEachFeature: function (feature, layer) {
+    				layer.bindPopup('<h1>'+feature.properties.f1+'</h1><p>name: '+feature.properties.f2+'</p>');
+  				}
+			}).addTo(map);
+		
 </script>
 	 <p>Data come from LDEQ</p>
 </body>
