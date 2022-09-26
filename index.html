@@ -48,7 +48,8 @@ body {
     				maxZoom: 13,
    				attribution: '© OpenStreetMap'}).addTo(map);
 		
-			var caddowells = L.marker([-93.93314, 32.56717], {
+			var caddowells = L.marker([-93.93314, 32.56717],
+				"properties": {
 				"color": "ffba01"}).addTo(map)
     				.bindPopup('Walter B. Jacobs Park<br> Most Recent Level: 193.47')
     				.openPopup();
