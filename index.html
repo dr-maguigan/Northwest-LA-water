@@ -429,6 +429,27 @@ body {
 			L.geoJSON(wells, {
     				onEachFeature: onEachFeature
 			}).addTo(map);
+		
+			L.Control.Watermark = L.Control.extend({
+    				onAdd: function(map) {
+        				var img = L.DomUtil.create('img');
+
+        				img.src = "text_next_to_logo.png";
+        				img.style.width = '200px';
+
+        return img;
+    },
+
+    onRemove: function(map) {
+        // Nothing to do here
+    }
+});
+
+L.control.watermark = function(opts) {
+    return new L.Control.Watermark(opts);
+}
+
+L.control.watermark({ position: 'bottomleft' }).addTo(map);
 			
 </script>
 	 <p>Gray polygons represent the Carrizo-Wilcox aquifer (Data come from LDEQ). To learn more about the aquifer, <a href="https://www.twdb.texas.gov/groundwater/aquifer/majors/carrizo-wilcox.asp">click here.</a></p>
