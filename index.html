@@ -190,7 +190,7 @@ body {
     				}
 			}
 		
-			var wells = [{
+			var caddowells = [{
     				"type": "Feature",
     				"properties": {
         				"popupContent": "Walter B. Jacobs Park: 193.47"
@@ -271,7 +271,13 @@ body {
         				"type": "Point",
         				"coordinates": [-93.9404097, 32.2661755]
 				}
-				}, {
+				}];
+		
+			L.geoJSON(caddowells, {
+    				onEachFeature: onEachFeature
+			}).addTo(map);
+		
+			var bossierwells = [{
 				"type": "Feature",
     				"properties": {
         				"popupContent": "North Airline Acres: 2.8"
@@ -374,61 +380,25 @@ body {
 				"type": "Feature",
     				"properties": {
         				"popupContent": "Autumn Place: 2.4"
-    				},
-    				"geometry": {
-        				"type": "Point",
-        				"coordinates": [-93.72445, 32.59875]
-				}
-				}, {
-				"type": "Feature",
-    				"properties": {
-        				"popupContent": "Red River Near Hosston: 7.42"
-    				},
-    				"geometry": {
-        				"type": "Point",
-        				"coordinates": [-93.8208313147931, 32.89343195779419]
-				}
-				}, {
-				"type": "Feature",
-    				"properties": {
-        				"popupContent": "Twelvemile Bayou near Dixie: 2.4"
-    				},
-    				"geometry": {
-        				"type": "Point",
-        				"coordinates": [-93.87746100527966, 32.64564664818235]
-				}
-				}, {
-				"type": "Feature",
-    				"properties": {
-        				"popupContent": "Flat River near Shed Rd near Bossier City: 4.34"
-    				},
-    				"geometry": {
-        				"type": "Point",
-        				"coordinates": [-93.646943336587, 32.56262689520695]
-				}
-				}, {
-				"type": "Feature",
-    				"properties": {
-        				"popupContent": "Willow Chute Bayou at Swan Lake Rd nr Bossier City: 1.71"
-    				},
-    				"geometry": {
-        				"type": "Point",
-        				"coordinates": [-93.68095817416412, 32.56524453867455]
-				}
-				}, {
-				"type": "Feature",
-    				"properties": {
-        				"popupContent": "Red River at Shreveport: 13.74"
-    				},
-    				"geometry": {
-        				"type": "Point",
-        				"coordinates": [-93.74037518409973, 32.51535633021526]
-				}
+    				}
 				}];
-			
-			L.geoJSON(wells, {
+		
+			L.geoJSON(bossierwells, {
     				onEachFeature: onEachFeature
 			}).addTo(map);
+		
+			var Hosston = L.marker([-93.72445, 32.59875]).bindPopup("Red River Near Hosston<br>Current level: 7.42 ft</br>"),
+			    Twelvemile = L.marker([-93.87746100527966, 32.64564664818235]).bindPopup("Twelvemile Bayou near Dixie<br>Current level: 2.4 ft</br>"),
+			    Flatriver = L.marker([-93.646943336587, 32.56262689520695]).bindPopup("Flat River near Shed Rd near Bossier City<br>Current level: 4.34 ft</br>"),
+    			    Willowchute = L.marker([-93.68095817416412, 32.56524453867455]).bindPopup("Willow Chute Bayou at Swan Lake Rd nr Bossier City<br>Current level: 1.71 ft</br>"),	
+			    Redriver = L.marker([-93.74037518409973, 32.51535633021526]).bindPopup("Red River at Shreveport<br>Current level: 13.74 ft</br>");
+    				
+        		var gauges = L.layergroup([Hosston, Twelvemile, Flatriver, Willowchute, Redriver])
+			
+			var overlayMaps = {
+    				"Stream Gauges": gauges
+};
+			var layerControl = L.control.layers(overlayMaps).addTo(map);
 		
 			L.Control.Watermark = L.Control.extend({
     				onAdd: function(map) {
