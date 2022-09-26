@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Northwest Louisiana Groundwater</title>
+  <title>Northwest Louisiana Water Conditions</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
@@ -38,7 +38,7 @@ body {
 </style>
 </head>
  <body>
-	<h2>Northwest Louisiana Groundwater</h2>
+	<h2>Northwest Louisiana Water Conditions</h2>
   	<div id="map"></div>
 	     
   	<script type="text/javascript">
@@ -381,6 +381,51 @@ body {
         				"type": "Point",
         				"coordinates": [-93.72445, 32.59875]
 				}
+				}, {
+				"type": "Feature",
+    				"properties": {
+        				"popupContent": "Red River Near Hosston: 7.42"
+    				},
+    				"geometry": {
+        				"type": "Point",
+        				"coordinates": [-93.8208313147931, 32.89343195779419]
+				}
+				}, {
+				"type": "Feature",
+    				"properties": {
+        				"popupContent": "Twelvemile Bayou near Dixie: 2.4"
+    				},
+    				"geometry": {
+        				"type": "Point",
+        				"coordinates": [-93.87746100527966, 32.64564664818235]
+				}
+				}, {
+				"type": "Feature",
+    				"properties": {
+        				"popupContent": "Flat River near Shed Rd near Bossier City: 4.34"
+    				},
+    				"geometry": {
+        				"type": "Point",
+        				"coordinates": [-93.646943336587, 32.56262689520695]
+				}
+				}, {
+				"type": "Feature",
+    				"properties": {
+        				"popupContent": "Willow Chute Bayou at Swan Lake Rd nr Bossier City: 1.71"
+    				},
+    				"geometry": {
+        				"type": "Point",
+        				"coordinates": [-93.68095817416412, 32.56524453867455]
+				}
+				}, {
+				"type": "Feature",
+    				"properties": {
+        				"popupContent": "Red River at Shreveport: 13.74"
+    				},
+    				"geometry": {
+        				"type": "Point",
+        				"coordinates": [-93.74037518409973, 32.51535633021526]
+				}
 				}];
 
 			L.geoJSON(wells, {
@@ -394,6 +439,7 @@ body {
 	 <p>Blue polygons represent the Carrizo-Wilcox aquifer (Data come from LDEQ). To learn more about the aquifer,<a href="https://www.twdb.texas.gov/groundwater/aquifer/majors/carrizo-wilcox.asp">click here.</a></p>
 	 <p>Well level data represent the most recent readings collected by RRWMI at LSUS.</p>
 	 <p>Well levels in Caddo Parish are reported in feet above sea level. Well levels in Bossier Parish are reported in feet below the surface.</p>
+	 <p>River and stream gauge levels were collected from USGS and are presented in feet above channel bottom.</p>
 	 <img src="text_next_to_logo.png" alt="RRWMI Logo" class="center">
 </body>
 </html>
