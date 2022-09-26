@@ -425,8 +425,13 @@ body {
         				"coordinates": [-93.74037518409973, 32.51535633021526]
 				}
 				}];
-
+			
+			var wellsstyle = {
+				"color":"#ffba01"};
+			    
 			L.geoJSON(wells, {
+    				style: wellsstyle
+				}, {
     				onEachFeature: onEachFeature
 			}).addTo(map);
 			
