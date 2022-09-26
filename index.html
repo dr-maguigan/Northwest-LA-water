@@ -426,12 +426,7 @@ body {
 				}
 				}];
 			
-			var wellsstyle = {
-				"color":"#ffba01"};
-			    
 			L.geoJSON(wells, {
-    				style: wellsstyle
-				}, {
     				onEachFeature: onEachFeature
 			}).addTo(map);
 			
