@@ -387,11 +387,6 @@ body {
     				onEachFeature: onEachFeature
 			}).addTo(map);
 		
-			var controlLayers = L.control.layers( null, null, {
-    				position: "topright",
-    				collapsed: false
-  				}).addTo(map);
-		
 			var gauges = [{
 				"type": "Feature",
     				"properties": {
@@ -444,13 +439,15 @@ body {
     				onEachFeature: onEachFeature
 			}).addTo(map);
 		
-			var overlayMaps = {
-    				"Caddo Wells": caddowells,
-				"Bossier Wells": bossierwells,
-				"Stream Gauges": gauges
-			};
+			var controlLayers = L.control.layers( null, null, {
+    				position: "topright",
+    				collapsed: false
+  				}).addTo(map);
 		
-			var layerControl = L.control.layers(overlayMaps).addTo(map);
+			controlLayers.addOverlay(caddowells, "Caddo Wells");
+			conrolLayers.addOverlay(bossierwells, "Bossier Wells");
+			controlLayers.addOverlay(gagues, "Stream Gauges);
+			
 		
 			L.Control.Watermark = L.Control.extend({
     				onAdd: function(map) {
