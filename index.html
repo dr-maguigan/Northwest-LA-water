@@ -46,18 +46,28 @@ body {
     				maxZoom: 13,
    				attribution: '© OpenStreetMap'});
 		
-			var hosston = L.marker([-93.8208313147931, 32.89343195779419]).bindPopup("Red River near Hosston: 7.42 ft");
+			var hosston = L.marker([32.89343195779419, -93.8208313147931]).bindPopup("Red River near Hosston: 7.42 ft");
 		
 			var gages = L.layerGroup([hosston]);
+		
+			var wbj = L.marker([32.56717, -93.93314]).bindPopup("Walter B. Jacobs Park: 193.47 ft");
+		
+			var caddowells = L.layerGroup([wbj]);
+		
+			var naa = L.marker([32.62255, -93.71567]).bindPopup("North Airline Acres: 2.8 ft");
+		
+			var bossierwells = L.layerGroup([naa]);
 		
 			 var map = L.map('map', {
 				 center: [32.52899904360769, -93.74939943579366],
 				 zoom: 10,
-				 layers: [osm, gages]
+				 layers: [osm, caddowells, bossierwells, gages]
 			});
 		
 			var overlayMaps = {
-				"Stream gauges": gages
+				"Stream gauges": gages,
+				"Bosser Parish Wells": bossierwells,
+				"Caddo Parish Wells": caddowells,
 			};
 		
 			var layerControl = L.control.layers(overlayMaps).addTo(map);
