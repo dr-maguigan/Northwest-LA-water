@@ -387,6 +387,11 @@ body {
     				onEachFeature: onEachFeature
 			}).addTo(map);
 		
+			var controlLayers = L.control.layers( null, null, {
+    				position: "topright",
+    				collapsed: false
+  				}).addTo(map);
+		
 			var Hosston = L.marker([-93.72445, 32.59875]).bindPopup("Red River Near Hosston<br>Current level: 7.42 ft</br>"),
 			    Twelvemile = L.marker([-93.87746100527966, 32.64564664818235]).bindPopup("Twelvemile Bayou near Dixie<br>Current level: 2.4 ft</br>"),
 			    Flatriver = L.marker([-93.646943336587, 32.56262689520695]).bindPopup("Flat River near Shed Rd near Bossier City<br>Current level: 4.34 ft</br>"),
