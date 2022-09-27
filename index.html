@@ -55,12 +55,31 @@ body {
 			var gages = L.layerGroup([hosston, tm, fr, wc, rr]);
 		
 			var wbj = L.marker([32.56717, -93.93314]).bindPopup("Walter B. Jacobs Park: 193.47 ft");
+			var hp = L.marker([32.35892, -93.6911]).bindPopup("Hannah's Park: 141.62 ft");
+			var mr = L.marker([32.37806, -93.74217]).bindPopup("Mayo Rd: 119.16 ft");
+			var kv = L.marker([32.33322, -93.83894]).bindPopup("Keithville: 128.97 ft");
+			var sc = L.marker([32.31394, -93.94589]).bindPopup("South Camp: 253.52 ft");
+			var wl = L.marker([32.32269, -93.71125]).bindPopup("Wallace Lake: 144.11 ft");
+			var b = L.marker([32.59381, -93.89786]).bindPopup("Blanchard: 224.81 ft");
+			var gw = L.marker([32.42542, -93.93969]).bindPopup("Greenwood: 235.12 ft");
+			var ejp = L.marker([32.2661755, -93.9404097]).bindPopup("Eddie Jones Park: 238.30 ft);
 		
-			var caddowells = L.layerGroup([wbj]);
+			var caddowells = L.layerGroup([wbj, hp, mr, kv, sc, wl, b, gw, ejp]);
 		
 			var naa = L.marker([32.62255, -93.71567]).bindPopup("North Airline Acres: 2.8 ft");
+			var brl = L.marker([32.62071, -93.69546]).bindPopup("Belle Rose at Legacy: 3.3 ft");
+			var nsc = L.marker([32.63013, -93.65554]).bindPopup("North-South Corridor: 3.3 ft");
+			var frbc = L.marker([32.6099, -93.67127]).bindPopup("Flat River Well: 2.3 ft");
+			var wcbc = L.marker([32.594581, -93.66957]).bindPopup("Willow Chute Well: 5.8 ft");
+			var oc = L.marker([32.60399, -93.70569]).bindPopup("Oak Creak Well: 4.9 ft");
+			var rp = L.marker([32.59586, -93.70613]).bindPopup("Rosedale Place: 3.9 ft");
+			var btc = L.marker([32.58112, -93.72703]).bindPopup("Bossier Tennis Courts: 2.8 ft");
+			var sp = L.marker([32.60846, -93.74901]).bindPopup("Sewage Treatment Plant: -- ft");
+			var cb = L.marker([32.62009, -93.7307]).bindPopup("Cypress Bend Well: 7.18 ft");
+			var kp = L.marker([32.636, -93.7236]).bindPopup("Kingston Plantation: 3.5 ft");
+			var ap = L.marker([32.59875, -93.72445]).bindPopup("Autumn Place: 2.4 ft");
 		
-			var bossierwells = L.layerGroup([naa]);
+			var bossierwells = L.layerGroup([naa, brl, nsc, frbc, wbcb, oc, rp, btc, sp, cb, kp, ap]);
 		
 			 var map = L.map('map', {
 				 center: [32.52899904360769, -93.74939943579366],
@@ -71,12 +90,31 @@ body {
 			var overlayMaps = {
 				"Bossier Parish Wells": bossierwells,
 				"Caddo Parish Wells": caddowells,
-				"Stream gauges": gages
+				"Stream Gauges": gages
 			};
 		
 			var layerControl = L.control.layers(overlayMaps).addTo(map);
 		
-			
+			L.Control.Watermark = L.Control.extend({
+    				onAdd: function(map) {
+        				var img = L.DomUtil.create('img');
+
+        				img.src = "text_next_to_logo.png";
+        				img.style.width = '1200px';
+
+        return img;
+    },
+
+    onRemove: function(map) {
+    }
+});
+
+L.control.watermark = function(opts) {
+    return new L.Control.Watermark(opts);
+}
+
+L.control.watermark({ position: 'bottomleft' }).addTo(map);
+		
 </script>
 	 <p>Well level data represent the most recent readings collected by RRWMI at LSUS. Well levels in Caddo Parish are reported in feet above sea level. Well levels in Bossier Parish are reported in feet below the surface.</p>
 	 <p>River and stream gauge levels were collected from USGS and are presented in feet above channel bottom.</p>
