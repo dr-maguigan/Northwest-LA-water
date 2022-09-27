@@ -42,9 +42,9 @@ body {
   	<div id="map"></div>
 	     
   	<script type="text/javascript">
-                       L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                       var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     				maxZoom: 13,
-   				attribution: '© OpenStreetMap'}).addTo(map);
+   				attribution: '© OpenStreetMap'});
 		
 			var hosston = L.marker([-93.8208313147931, 32.89343195779419]).bindPopup("Red River near Hosston: 7.42 ft").addTo(map);
 		
