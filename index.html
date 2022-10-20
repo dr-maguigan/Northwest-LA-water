@@ -53,39 +53,41 @@ body {
     				}
 			});
 			var yellowIcon = new pinIcon({iconUrl: 'yellow_pin.png'})
+			var redIcon = new pinIcon({iconUrl: 'red_pin.png'})
+			var greenIcon = new pinIcon({iconUrl: 'green_pin.png'})
 		
-			var hosston = L.marker([32.89343195779419, -93.8208313147931], {icon: yellowIcon}).bindPopup("Red River near Hosston: 7.50 ft");
-			var tm = L.marker([32.64564664818235, -93.87746100527966]).bindPopup("Twelvemile Bayou near Dixie: 9.51 ft");
-			var fr = L.marker([32.56262689520695, -93.646943336587]).bindPopup("Flat River near Shed Rd near Bossier City: 4.27 ft");
-			var wc = L.marker([32.56524453867455, -93.68095817416412]).bindPopup("Willow Chute Bayou at Swan Lake Rd nr Bossier City: 1.71 ft");
-			var rr = L.marker([32.51535633021526, -93.74037518409973]).bindPopup("Red River at Shreveport: 13.75 ft");
+			var hosston = L.marker([32.89343195779419, -93.8208313147931], {icon: greenIcon}).bindPopup("Red River near Hosston: 7.49 ft");
+			var tm = L.marker([32.64564664818235, -93.87746100527966], {icon: greenIcon}).bindPopup("Twelvemile Bayou near Dixie: 9.63 ft");
+			var fr = L.marker([32.56262689520695, -93.646943336587], {icon: greenIcon}).bindPopup("Flat River near Shed Rd near Bossier City: 3.97 ft");
+			var wc = L.marker([32.56524453867455, -93.68095817416412], {icon: greenIcon}).bindPopup("Willow Chute Bayou at Swan Lake Rd nr Bossier City: 1.71 ft");
+			var rr = L.marker([32.51535633021526, -93.74037518409973], {icon: greenIcon}).bindPopup("Red River at Shreveport: 13.9 ft");
 		
 			var gages = L.layerGroup([hosston, tm, fr, wc, rr]);
 		
-			var wbj = L.marker([32.56717, -93.93314]).bindPopup("Walter B. Jacobs Park: 193.47 ft");
-			var hp = L.marker([32.35892, -93.6911]).bindPopup("Hannah's Park: 141.62 ft");
-			var mr = L.marker([32.37806, -93.74217]).bindPopup("Mayo Rd: 119.16 ft");
-			var kv = L.marker([32.33322, -93.83894]).bindPopup("Keithville: 128.97 ft");
-			var sc = L.marker([32.31394, -93.94589]).bindPopup("South Camp: 253.52 ft");
-			var wl = L.marker([32.32269, -93.71125]).bindPopup("Wallace Lake: 144.11 ft");
-			var b = L.marker([32.59381, -93.89786]).bindPopup("Blanchard: 224.81 ft");
-			var gw = L.marker([32.42542, -93.93969]).bindPopup("Greenwood: 235.12 ft");
-			var ejp = L.marker([32.2661755, -93.9404097]).bindPopup("Eddie Jones Park: 238.30 ft");
+			var wbj = L.marker([32.56717, -93.93314], {icon: redIcon}).bindPopup("Walter B. Jacobs Park: 193.47 ft");
+			var hp = L.marker([32.35892, -93.6911], {icon: redIcon}).bindPopup("Hannah's Park: 141.62 ft");
+			var mr = L.marker([32.37806, -93.74217], {icon: redIcon}).bindPopup("Mayo Rd: 119.16 ft");
+			var kv = L.marker([32.33322, -93.83894], {icon: redIcon}).bindPopup("Keithville: 128.97 ft");
+			var sc = L.marker([32.31394, -93.94589], {icon: redIcon}).bindPopup("South Camp: 253.52 ft");
+			var wl = L.marker([32.32269, -93.71125], {icon: redIcon}).bindPopup("Wallace Lake: 144.11 ft");
+			var b = L.marker([32.59381, -93.89786], {icon: redIcon}).bindPopup("Blanchard: 224.81 ft");
+			var gw = L.marker([32.42542, -93.93969], {icon: redIcon}).bindPopup("Greenwood: 235.12 ft");
+			var ejp = L.marker([32.2661755, -93.9404097], {icon: redIcon}).bindPopup("Eddie Jones Park: 238.30 ft");
 		
 			var caddowells = L.layerGroup([wbj, hp, mr, kv, sc, wl, b, gw, ejp]);
 		
-			var naa = L.marker([32.62255, -93.71567]).bindPopup("North Airline Acres: 2.8 ft");
-			var brl = L.marker([32.62071, -93.69546]).bindPopup("Belle Rose at Legacy: 3.3 ft");
-			var nsc = L.marker([32.63013, -93.65554]).bindPopup("North-South Corridor: 3.3 ft");
-			var frbc = L.marker([32.6099, -93.67127]).bindPopup("Flat River Well: 2.3 ft");
-			var wcbc = L.marker([32.594581, -93.66957]).bindPopup("Willow Chute Well: 5.8 ft");
-			var oc = L.marker([32.60399, -93.70569]).bindPopup("Oak Creak Well: 4.9 ft");
-			var rp = L.marker([32.59586, -93.70613]).bindPopup("Rosedale Place: 3.9 ft");
-			var btc = L.marker([32.58112, -93.72703]).bindPopup("Bossier Tennis Courts: 2.8 ft");
-			var sp = L.marker([32.60846, -93.74901]).bindPopup("Sewage Treatment Plant: -- ft");
-			var cb = L.marker([32.62009, -93.7307]).bindPopup("Cypress Bend Well: 7.18 ft");
-			var kp = L.marker([32.636, -93.7236]).bindPopup("Kingston Plantation: 3.5 ft");
-			var ap = L.marker([32.59875, -93.72445]).bindPopup("Autumn Place: 2.4 ft");
+			var naa = L.marker([32.62255, -93.71567], {icon: yellowIcon}).bindPopup("North Airline Acres: 2.8 ft");
+			var brl = L.marker([32.62071, -93.69546], {icon: yellowIcon}).bindPopup("Belle Rose at Legacy: 3.3 ft");
+			var nsc = L.marker([32.63013, -93.65554], {icon: yellowIcon}).bindPopup("North-South Corridor: 3.3 ft");
+			var frbc = L.marker([32.6099, -93.67127], {icon: yellowIcon}).bindPopup("Flat River Well: 2.3 ft");
+			var wcbc = L.marker([32.594581, -93.66957], {icon: yellowIcon}).bindPopup("Willow Chute Well: 5.8 ft");
+			var oc = L.marker([32.60399, -93.70569], {icon: yellowIcon}).bindPopup("Oak Creak Well: 4.9 ft");
+			var rp = L.marker([32.59586, -93.70613], {icon: yellowIcon}).bindPopup("Rosedale Place: 3.9 ft");
+			var btc = L.marker([32.58112, -93.72703], {icon: yellowIcon}).bindPopup("Bossier Tennis Courts: 2.8 ft");
+			var sp = L.marker([32.60846, -93.74901], {icon: yellowIcon}).bindPopup("Sewage Treatment Plant: -- ft");
+			var cb = L.marker([32.62009, -93.7307], {icon: yellowIcon}).bindPopup("Cypress Bend Well: 7.18 ft");
+			var kp = L.marker([32.636, -93.7236], {icon: yellowIcon}).bindPopup("Kingston Plantation: 3.5 ft");
+			var ap = L.marker([32.59875, -93.72445], {icon: yellowIcon}).bindPopup("Autumn Place: 2.4 ft");
 		
 			var bossierwells = L.layerGroup([naa, brl, nsc, frbc, wcbc, oc, rp, btc, sp, cb, kp, ap]);
 		
@@ -125,7 +127,7 @@ L.control.watermark({ position: 'bottomleft' }).addTo(map);
 		
 </script>
 	 <p>Well level data represent the most recent readings collected by RRWMI at LSUS. Well levels in Caddo Parish are reported in feet above sea level. Well levels in Bossier Parish are reported in feet below the surface.</p>
-	 <p>River and stream gauge levels were collected from USGS and are presented in feet above channel bottom. Readings are current as of 9/27/2022.</p>
+	 <p>River and stream gauge levels were collected from USGS and are presented in feet above channel bottom. Readings are current as of 10/20/2022.</p>
 	 <p><a href="https://www.lsus.edu/community/rrwmi">
 	 <img src="text_next_to_logo.png" alt="RRWMI Logo" class="center">
 	 </a></p>
