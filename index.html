@@ -46,7 +46,9 @@ body {
     				maxZoom: 13,
    				attribution: '© OpenStreetMap'});
 		
-			var hosston = L.marker([32.89343195779419, -93.8208313147931]).bindPopup("Red River near Hosston: 7.50 ft");
+			var yellowIcon = new LeafIcon({iconUrl: 'yellow_pin.png'})
+		
+			var hosston = L.marker([32.89343195779419, -93.8208313147931], {icon: yellowIcon}).bindPopup("Red River near Hosston: 7.50 ft");
 			var tm = L.marker([32.64564664818235, -93.87746100527966]).bindPopup("Twelvemile Bayou near Dixie: 9.51 ft");
 			var fr = L.marker([32.56262689520695, -93.646943336587]).bindPopup("Flat River near Shed Rd near Bossier City: 4.27 ft");
 			var wc = L.marker([32.56524453867455, -93.68095817416412]).bindPopup("Willow Chute Bayou at Swan Lake Rd nr Bossier City: 1.71 ft");
