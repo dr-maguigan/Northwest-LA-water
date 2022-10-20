@@ -45,8 +45,14 @@ body {
                        var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     				maxZoom: 13,
    				attribution: '© OpenStreetMap'});
-		
-			var yellowIcon = new LeafIcon({iconUrl: 'yellow_pin.png'})
+			var pinIcon = L.Icon.extend({
+    				options: {
+        				iconSize:     [38, 95],
+        				iconAnchor:   [22, 94],
+       					popupAnchor:  [-3, -76]
+    				}
+			});
+			var yellowIcon = new pinIcon({iconUrl: 'yellow_pin.png'})
 		
 			var hosston = L.marker([32.89343195779419, -93.8208313147931], {icon: yellowIcon}).bindPopup("Red River near Hosston: 7.50 ft");
 			var tm = L.marker([32.64564664818235, -93.87746100527966]).bindPopup("Twelvemile Bayou near Dixie: 9.51 ft");
