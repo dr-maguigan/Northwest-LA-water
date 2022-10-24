@@ -125,6 +125,15 @@ L.control.watermark = function(opts) {
 
 L.control.watermark({ position: 'bottomleft' }).addTo(map);
 		
+	map.on('zoomend', function() {
+		if (map.getZoom() <15){
+				map.removeLayer(bossierwells[0,1,2,3,4]);
+		}
+		else {
+				map.addLayer(bossierwells[0,1,2,3,4]);
+		}
+	});
+		
 </script>
 	 <p>Well level data represent the most recent readings collected by RRWMI at LSUS. Well levels in Caddo Parish are reported in feet above sea level. Well levels in Bossier Parish are reported in feet below the surface.</p>
 	 <p>River and stream gauge levels were collected from USGS and are presented in feet above channel bottom. Readings are current as of 10/20/2022.</p>
