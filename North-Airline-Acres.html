@@ -12,7 +12,7 @@
 #myInput {
   
   width: 80%;
-  font-size: 16px;
+  font-size: 12px;
   padding: 12px 20px 12px 40px;
   border: 1px solid #ddd;
   margin-bottom: 12px;
@@ -28,10 +28,12 @@
 }
 
 #myTable {
+	margin-left: auto; 
+  margin-right: auto;
   border-collapse: collapse;
-  width: 100%;
+  width: 85%;
   border: 1px solid #ddd;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 #myTable th, {
@@ -39,8 +41,18 @@
   padding: 15px;
 }
 #myTable td {
-  text-align: center;
-  padding: 15px;
+text-align: center;
+  padding: 8px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+#myTable td:first-child {
+    border-left: none;
+}
+
+#myTable td:last-child {
+    border-right: none;
 }
 
 #myTable tr {
@@ -50,14 +62,16 @@
 #myTable tr.header, #myTable tr:hover {
   background-color: #f1f1f1;
 }
+
 </style>
 </head>
 <body>
 
 <h2>Historical Data</h2>
+<table class = "center">
 <table id="myTable">
 <tr class="header">
-    <th colspan="9" style="width:80%;">North Airline Acres (Elevation 171.5 ft)</th>
+    <th colspan="9" style="width:100%;">North Airline Acres (Elevation 171.5 ft)</th>
   <tr class="header">
     <th style="width:16%;"> </th>
     <th colspan="2" style="width:16%;">2019</th>
@@ -210,6 +224,5 @@
     <td>-</td>
   </tr>
 </table>
-
 </body>
 </html>
