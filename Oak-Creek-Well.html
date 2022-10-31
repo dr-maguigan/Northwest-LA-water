@@ -65,11 +65,61 @@ text-align: center;
 #myTable tr.header, #myTable tr:hover {
   background-color: #f1f1f1;
 }
+.dropbtn {
+background-color: #77C3EC;
+color: white;
+padding: 16px;
+font-size: 16px;
+border: none;
+}
 
+.dropdown {
+position: relative;
+display: inline-block;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f1f1f1;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown-content a {
+color: black;
+font-size: 14px;
+padding: 10px 12px;
+text-decoration: none;
+display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e6e8e;}
 </style>
 </head>
 <body>
-
+<div class="dropdown">
+	<button class="dropbtn">Well Selection</button>
+		<div class="dropdown-content">
+			<a href="https://dr-maguigan.github.io/Northwest-LA-water/Autumn-Place.html#">Autumn Place</a>
+			<a href="https://dr-maguigan.github.io/Northwest-LA-water/Belle-Rose-at-Legacy.html#">Belle Rose at Legacy</a>
+			<a href="https://dr-maguigan.github.io/Northwest-LA-water/Bossier-Tennis-Courts.html#">Bossier Tennis Courts</a>
+			<a href="https://dr-maguigan.github.io/Northwest-LA-water/Cypress-Bend-Well.html#">Cypress Bend Well</a>
+			<a href="https://dr-maguigan.github.io/Northwest-LA-water/Flat-River-Well.html#">Flat River Well</a>
+			<a href="https://dr-maguigan.github.io/Northwest-LA-water/Kingston-Plantation.html#">Kingston Plantation</a>
+			<a href="https://dr-maguigan.github.io/Northwest-LA-water/North-Airline-Acres.html#">North Airline Acres</a>
+			<a href="https://dr-maguigan.github.io/Northwest-LA-water/North-South-Corridor.html#">North-South Corridor</a>
+			<a href="https://dr-maguigan.github.io/Northwest-LA-water/Oak-Creek-Well.html#">Oak Creek Well</a>
+			<a href="https://dr-maguigan.github.io/Northwest-LA-water/Rosedale-Place.html#">Rosedale Place</a>
+			<a href="https://dr-maguigan.github.io/Northwest-LA-water/Sewage-Treatment-Plant.html#">Sewage Treatment Plant</a>
+			<a href="https://dr-maguigan.github.io/Northwest-LA-water/Willow-Chute-Well.html#">Willow Chute Well</a>
+		</div>
+</div>
 <h2>Historical Data for Oak Creek Well</h2>
 <h3>Elevation: 171.5 ft</h3>
 <table class = "center">
