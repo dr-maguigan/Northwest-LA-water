@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 	<title>USGS Water Services AJAX Example</title>
 </head>
 <body>
@@ -50,13 +50,6 @@
 		  success: function(json){
 			   $('#gageht').val(json.value.timeSeries[0].values[0].value[0].value);
 			   $('#elevation').val(json.value.timeSeries[0].values[1].value[0].value);
-
-
-			   
-		  error : function(XMLHttpRequest, textStatus, errorThrown) {
-			   $('#gageht').val('');
-			   $('#elevation').val('');
-			   
 		  }
 		});
 	});
