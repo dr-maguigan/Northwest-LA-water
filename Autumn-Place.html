@@ -3,16 +3,24 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-	a {
+	#footer_container
+{
+    bottom: 0;
+    height: 4.0em;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    text-align:center;
+    color: black;
+ text-decoration: none;
+}
+a {
  color: black;
  text-decoration: none;
-left-align: auto;
-right-align: auto;
 }
 a:hover {
  color: purple;
 }
-
 * {
   box-sizing: border-box;
 }
@@ -287,9 +295,10 @@ display: block;
   </tr>
 </table>
 	
-	<h3> </h3>
-	<a href="Autumn_Place.xlsx" download>Download Autumn Place Data</a>
-	<h3> </h3>
-	<a href="Bossier_Wells.xlsx" download>Download All Bossier Well Data</a>
+	<div id="footer_container">
+    <a href="Autumn_Place.xlsx" download>Download Autumn Place Data</a>
+    <p></p>
+	  <a href="Bossier_Wells.xlsx" download>Download All Bossier Well Data</a>
+</div>
 </body>
 </html>
