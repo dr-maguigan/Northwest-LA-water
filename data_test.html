@@ -6,40 +6,28 @@
 	<title>USGS Water Services AJAX Example</title>
 </head>
 <body>
-	<h1>USGS Water Services AJAX Example</h1>
-	<p>This example shows how the USGS Instantaneous Values web service can be invoked using Asynchronous Javascript and XML (AJAX) technology. The jQuery framework is used.</p>
+	
 	<table width="100%" border="0">
+          
           <tr>
-            <td><label for="site"><strong>USGS Site No.</strong></label>              <input name="site" type="text" id="site" value="07344400" size="8" maxlength="15" />
-              <a href="http://wdr.water.usgs.gov/nwisgmap/index.html">Find sites </a></td>
-          </tr>
-          <tr>
-            <td><label for="gageht"><strong>Latest Gage Height</label></td>
-          </tr>
-          <tr>
-            <td><input id="gageht" size="7" readonly="readonly" /></td>
+            <td>"gageht"</td>
           </tr>
           
           
         </table>
-      <p>
-            <input type="button" name="query" id="query" value="Get Latest Data" />
-            <input type="reset" name="reset" id="reset" value="Reset" />
-      </p>
+     
 <script type="text/javascript">
-	
-	$('#query').click(function() {
-		site = $('#site').attr("value");
-		$.ajax({
-		  url: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07344400&parameterCd=00065,63160&siteStatus=all",
-		  dataType: 'json',
-		  data: '',
-		  success: function(json){
+		hossfunction = 
+			$.ajax({
+		 	 url: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07344400&parameterCd=00065&siteStatus=all",
+		 	 dataType: 'json',
+		 	 data: '',
+		  	success: function(json){
 			   $('#gageht').val(json.value.timeSeries[0].values[0].value[0].value);
+				return "gageht"
 			}
 		});
-	});
-//]]>
+	
 </script>
 </body>
 </html>
