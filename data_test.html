@@ -8,8 +8,7 @@
 <body>
 	<h1>USGS Water Services AJAX Example</h1>
 	<p>This example shows how the USGS Instantaneous Values web service can be invoked using Asynchronous Javascript and XML (AJAX) technology. The jQuery framework is used.</p>
-	<form id="form1" method="post" action="">
-        <table width="100%" border="0">
+	<table width="100%" border="0">
           <tr>
             <td><label for="site"><strong>USGS Site No.</strong></label>              <input name="site" type="text" id="site" value="07344400" size="8" maxlength="15" />
               <a href="http://wdr.water.usgs.gov/nwisgmap/index.html">Find sites </a></td>
@@ -27,7 +26,6 @@
             <input type="button" name="query" id="query" value="Get Latest Data" />
             <input type="reset" name="reset" id="reset" value="Reset" />
       </p>
-	</form>
 <script type="text/javascript">
 	
 	$('#query').click(function() {
