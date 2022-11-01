@@ -10,6 +10,7 @@
   integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
    crossorigin=""></script>
    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
   <style>
     h1 {text-align: center;}
     h2 {text-align: center;}
@@ -71,8 +72,11 @@ body {
 			var yellowIcon = new pinIcon({iconUrl: 'yellow_pin.png'})
 			var redIcon = new pinIcon({iconUrl: 'red_pin.png'})
 			var greenIcon = new pinIcon({iconUrl: 'green_pin.png'})
+			
+			var hosston_elev = 151.27
+			var hosston_sle = "hosstonht" + hosston_elev;
 		
-			var hosston = L.marker([32.89343195779419, -93.8208313147931], {icon: greenIcon}).bindPopup("Red River near Hosston: 7.61 ft");
+			var hosston = L.marker([32.89343195779419, -93.8208313147931], {icon: greenIcon}).bindPopup("Red River near Hosston<br>Gage Height: " + hosstonht + " ft<br>Stream Level Elevation: " + hosston_sle + " ft");
 			var tm = L.marker([32.64564664818235, -93.87746100527966], {icon: greenIcon}).bindPopup("Twelvemile Bayou near Dixie: 9.45 ft");
 			var fr = L.marker([32.56262689520695, -93.646943336587], {icon: greenIcon}).bindPopup("Flat River near Shed Rd near Bossier City: 4.12 ft");
 			var wc = L.marker([32.56524453867455, -93.68095817416412], {icon: greenIcon}).bindPopup("Willow Chute Bayou at Swan Lake Rd nr Bossier City: 1.71 ft");
@@ -190,6 +194,21 @@ L.control.watermark = function(opts) {
 L.control.watermark({ position: 'bottomleft' }).addTo(map);
 		
 	
+</script>
+	 <script type="text/javascript">
+	
+	$('#query').click(function() {
+		site = $('#site').attr("value");
+		$.ajax({
+		  url: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07344400&parameterCd=00065,63160&siteStatus=all",
+		  dataType: 'json',
+		  data: '',
+		  success: function(json){
+			   $('#hosstonht').val(json.value.timeSeries[0].values[0].value[0].value);
+		  }
+		});
+	});
+//]]>
 </script>
 	 <p>Well level data represent the most recent readings collected by RRWMI at LSUS. Elevations are relative to NAVD (1988).</p>
 	 <p>River and stream gauge levels were collected from USGS and are presented in feet above channel bottom. Readings are current as of 10/26/2022.</p>
