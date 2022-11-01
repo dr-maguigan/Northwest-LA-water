@@ -20,12 +20,7 @@
           <tr>
             <td><input id="gageht" size="7" readonly="readonly" /></td>
           </tr>
-          <tr>
-            <td><label for="elevation"><strong>Elevation</strong></label></td>
-          </tr>
-          <tr>
-            <td><input id="elevation" size="10" readonly="readonly" /></td>
-          </tr>
+          
           
         </table>
       <p>
@@ -43,8 +38,7 @@
 		  data: '',
 		  success: function(json){
 			   $('#gageht').val(json.value.timeSeries[0].values[0].value[0].value);
-			   $('#elevation').val(json.value.timeSeries[0].values[1].value[0].value);
-		  }
+			}
 		});
 	});
 //]]>
