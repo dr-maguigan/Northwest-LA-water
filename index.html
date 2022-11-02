@@ -53,8 +53,8 @@ body {
 	  margin: 0.05em 0;
 	  	font-family: Georgia}
 	  #custom-popup {width: 150px;}
-	  #custom-popup2 {width: 130px;}
-	  #custom-popup3 {width: 175px;}
+	  #custom-popup2 {width: 135px;}
+	  #custom-popup3 {width: 170px;}
 </style>
 </head>
  <body>
@@ -96,7 +96,7 @@ body {
         			$(tmh).text("Twelvemile Bayou near Dixie Gage height: " + data.value.timeSeries[0].values[0].value[0].value + " ft");
     				})
 			});
-			tm.bindPopup("<div id = 'custom-popup'></div>");
+			tm.bindPopup("<div id = 'custom-popup3'></div>");
 			
 			var fr = L.marker([32.56262689520695, -93.646943336587], {icon: greenIcon});
 			fr.on('popupopen', function(evt) {
@@ -106,7 +106,7 @@ body {
         			$(frh).text("Flat River near Shed Rd near Bossier City Gage height: " + data.value.timeSeries[0].values[0].value[0].value + " ft");
     				})
 			});
-			fr.bindPopup("<div id = 'custom-popup3'></div>");
+			fr.bindPopup("<div id = 'custom-popup2'></div>");
 			
 			var wc = L.marker([32.56524453867455, -93.68095817416412], {icon: greenIcon});
 			wc.on('popupopen', function(evt) {
