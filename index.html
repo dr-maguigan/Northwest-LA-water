@@ -131,15 +131,51 @@ body {
 		
 			var gages = L.layerGroup([hosston, tm, fr, wc, rr]);
 		
-			var wbj = L.marker([32.56717, -93.93314], {icon: redIcon}).bindPopup("Walter B. Jacobs Park: 193.47 ft");
-			var hp = L.marker([32.35892, -93.6911], {icon: redIcon}).bindPopup("Hannah's Park: 141.62 ft");
-			var mr = L.marker([32.37806, -93.74217], {icon: redIcon}).bindPopup("Mayo Rd: 119.16 ft");
-			var kv = L.marker([32.33322, -93.83894], {icon: redIcon}).bindPopup("Keithville: 128.97 ft");
-			var sc = L.marker([32.31394, -93.94589], {icon: redIcon}).bindPopup("South Camp: 253.52 ft");
-			var wl = L.marker([32.32269, -93.71125], {icon: redIcon}).bindPopup("Wallace Lake: 144.11 ft");
-			var b = L.marker([32.59381, -93.89786], {icon: redIcon}).bindPopup("Blanchard: 224.81 ft");
-			var gw = L.marker([32.42542, -93.93969], {icon: redIcon}).bindPopup("Greenwood: 235.12 ft");
-			var ejp = L.marker([32.2661755, -93.9404097], {icon: redIcon}).bindPopup("Eddie Jones Park: 238.30 ft");
+			var wbj_elev = 207.17
+			var wbj_depth = 15.7
+			var wbj_wt = wbj_elev - wbj_depth;
+		
+			var hp_elev = 201.72
+			var hp_depth = 66.8
+			var hp_wt = hp_elev - hp_depth;
+		
+			var mr_elev = 195.96
+			var mr_depth = 93.0
+			var mr_wt = mr_elev - mr_depth;
+		
+			var kv_elev = 200.7
+			var kv_depth = 75.9
+			var kv_wt = kv_elev - kv_depth;
+		
+			var sc_elev = 282.12
+			var sc_depth = 53.2
+			var sc_wt = sc_elev - sc_depth;
+		
+			var wl_elev = 164.71
+			var wl_depth = 24.4
+			var wl_wt = wl_elev - wl_depth;
+		
+			var b_elev = 230.21
+			var b_depth = 7.9
+			var b_wt = b_elev - b_depth;
+		
+			var gw_elev = 282.12
+			var gw_depth = 53.2
+			var gw_wt = gw_elev - gw_depth;
+		
+			var ejp_elev = 251.3
+			var ejp_depth = 17.0
+			var ejp_wt = ejp_elev - ejp_depth;
+			
+			var wbj = L.marker([32.56717, -93.93314], {icon: redIcon}).bindPopup("<h6><b>Walter B. Jacobs Park</b></h6><br><p>Elevation: 193.47 ft<br>Depth below surface: " + wbj_depth + " ft<br>Water table elevation: " + wbj_wt + " ft</p>");
+			var hp = L.marker([32.35892, -93.6911], {icon: redIcon}).bindPopup("<h6><b>Hannah's Park</b></h6><br><p>Elevation: 201.72 ft<br>Depth below surface: " + hp_depth + " ft<br>Water table elevation: " + hp_wt + " ft</p>");
+			var mr = L.marker([32.37806, -93.74217], {icon: redIcon}).bindPopup("<h6>Mayo Rd</b></h6><br><p>Elevation: 195.96 ft<br>Depth below surface: " + mr_depth + " ft<br>Water table elevation: " + mr_wt + " ft</p>");
+			var kv = L.marker([32.33322, -93.83894], {icon: redIcon}).bindPopup("<h6>Keithville</b></h6><br><p>Elevation: 200.7 ft<br>Depth below surface: " + kv_depth + " ft<br>Water table elevation: " + kv_wt + " ft</p>");
+			var sc = L.marker([32.31394, -93.94589], {icon: redIcon}).bindPopup("<h6>South Camp</b></h6><br><p>Elevation: 282.12 ft<br>Depth below surface: " + sc_depth + " ft<br>Water table elevation: " + sc_wt + " ft</p>");
+			var wl = L.marker([32.32269, -93.71125], {icon: redIcon}).bindPopup("<h6>Wallace Lake</b></h6><br><p>Elevation: 164.71 ft<br>Depth below surface: " + wl_depth + " ft<br>Water table elevation: " + wl_wt + " ft</p>");
+			var b = L.marker([32.59381, -93.89786], {icon: redIcon}).bindPopup("<h6>Blanchard</b></h6><br><p>Elevation: 230.21 ft<br>Depth below surface: " + b_depth + " ft<br>Water table elevation: " + b_wt + " ft</p>");
+			var gw = L.marker([32.42542, -93.93969], {icon: redIcon}).bindPopup("<h6>Greenwood</b></h6><br><p>Elevation: 282.12 ft<br>Depth below surface: " + gw_depth + " ft<br>Water table elevation: " + gw_wt + " ft</p>");
+			var ejp = L.marker([32.2661755, -93.9404097], {icon: redIcon}).bindPopup("<h6>Eddie Jones Park</b></h6><br><p>Elevation: 251.3 ft<br>Depth below surface: " + ejp_depth + " ft<br>Water table elevation: " + ejp_wt + " ft</p>");
 		
 			var caddowells = L.layerGroup([wbj, hp, mr, kv, sc, wl, b, gw, ejp]);
 		
