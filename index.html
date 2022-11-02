@@ -53,6 +53,8 @@ body {
 	  margin: 0.05em 0;
 	  	font-family: Georgia}
 	  #custom-popup {width: 150px;}
+	  #custom-popup2 {width: 140px;}
+	  #custom-popup3 {width: 160px;}
 </style>
 </head>
  <body>
@@ -84,8 +86,8 @@ body {
         			$(hh).text("Red River near Hosston Gage height: " + data.value.timeSeries[0].values[0].value[0].value + " ft");
     				})
 			});
-
 			hosston.bindPopup("<div id = 'custom-popup'></div>");
+			
 			var tm = L.marker([32.64564664818235, -93.87746100527966], {icon: greenIcon});
 			tm.on('popupopen', function(evt) {
     				$.get("https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07348000&parameterCd=00065,63160&siteStatus=all",
@@ -94,8 +96,8 @@ body {
         			$(tmh).text("Twelvemile Bayou near Dixie Gage height: " + data.value.timeSeries[0].values[0].value[0].value + " ft");
     				})
 			});
-
 			tm.bindPopup("<div id = 'custom-popup'></div>");
+			
 			var fr = L.marker([32.56262689520695, -93.646943336587], {icon: greenIcon});
 			fr.on('popupopen', function(evt) {
     				$.get("https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07349298&parameterCd=00065,63160&siteStatus=all",
@@ -104,8 +106,8 @@ body {
         			$(frh).text("Flat River near Shed Rd near Bossier City Gage height: " + data.value.timeSeries[0].values[0].value[0].value + " ft");
     				})
 			});
-
-			fr.bindPopup("<div id = 'custom-popup'></div>");
+			fr.bindPopup("<div id = 'custom-popup3'></div>");
+			
 			var wc = L.marker([32.56524453867455, -93.68095817416412], {icon: greenIcon});
 			wc.on('popupopen', function(evt) {
     				$.get("https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07349898&parameterCd=00065,63160&siteStatus=all",
@@ -114,8 +116,8 @@ body {
         			$(wch).text("Willow Chute Bayou at Swan Lake Rd nr BC Gage height: " + data.value.timeSeries[0].values[0].value[0].value + " ft");
     				})
 			});
-
-			wc.bindPopup("<div id = 'custom-popup'></div>");
+			wc.bindPopup("<div id = 'custom-popup2'></div>");
+			
 			var rr = L.marker([32.51535633021526, -93.74037518409973], {icon: greenIcon});
 			rr.on('popupopen', function(evt) {
     				$.get("https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07348500&parameterCd=00065,63160&siteStatus=all",
@@ -125,7 +127,7 @@ body {
     				})
 			});
 
-			rr.bindPopup("<div id = 'custom-popup'></div>");
+			rr.bindPopup("<div id = 'custom-popup2'></div>");
 		
 			var gages = L.layerGroup([hosston, tm, fr, wc, rr]);
 		
