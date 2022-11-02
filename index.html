@@ -79,8 +79,11 @@ body {
 			hosston.on('popupopen', function(evt) {
     				$.get("https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07344400&parameterCd=00065,63160&siteStatus=all",
     				function(data) {
+				hrr = "<b>Red River near Hosston</b><br>Elevation: 151.27 ft<br>Gage height: "
+				hrr_elev = " ft<br>Stream Elevation: "
+				ft = " ft"
         			hh = evt.popup._contentNode.childNodes[0];
-        			$(hh).text("<b>Red River near Hosston</b><br>Elevation: 151.27 ft<br>Gage height: " + data.value.timeSeries[0].values[0].value[0].value  + " ft<br>Stream Elevation: " + (151.27 + data.value.timeSeries[0].values[0].value[0].value) + " ft");
+        			$(hh).text(hrr + data.value.timeSeries[0].values[0].value[0].value + hrr_elev + math(151.27 + data.value.timeSeries[0].values[0].value[0].value) + ft);
     				})
 			});
 
