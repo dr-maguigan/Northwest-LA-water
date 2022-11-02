@@ -80,7 +80,7 @@ body {
     				$.get("https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07344400&parameterCd=00065,63160&siteStatus=all",
     				function(data) {
 				hh = evt.popup._contentNode.childNodes[0];
-        			$(hh).text(Red River near Hosston <br> Gage height: + data.value.timeSeries[0].values[0].value[0].value ft);
+        			$(hh).text(Red River near Hosston <br> Gage height: + data.value.timeSeries[0].values[0].value[0].value + ft);
     				})
 			});
 
