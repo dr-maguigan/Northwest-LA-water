@@ -83,7 +83,7 @@ body {
 			var hlevel;    
 			$.ajax({
     				type: "GET",
-    				url: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07299540&parameterCd=00065,63160&siteStatus=all",
+    				url: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07299540&parameterCd=00065&siteStatus=all",
     				dataType: 'json',
     				async: false,
     				data: $(this).serialize(),
@@ -95,45 +95,64 @@ body {
 			hosston.bindPopup("<h6>Red River near Hosston, LA</h6><br><p>Gage height: " + hlevel + " ft</p>");
 			
 			var tm = L.marker([32.64564664818235, -93.87746100527966], {icon: greenIcon});
-			tm.on('popupopen', function(evt) {
-    				$.get("https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07348000&parameterCd=00065,63160&siteStatus=all",
-    				function(data) {
-				tmh = evt.popup._contentNode.childNodes[0];
-        			$(tmh).text("Twelvemile Bayou near Dixie Gage height: " + data.value.timeSeries[0].values[0].value[0].value + " ft");
-    				})
-			});
-			tm.bindPopup("<div id = 'custom-popup3'></div>");
+			var tmlevel;
+			$.ajax({
+    				type: "GET",
+    				url: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07348000&parameterCd=00065&siteStatus=all",
+    				dataType: 'json',
+    				async: false,
+    				data: $(this).serialize(),
+    				success: function(data) {
+        				tmla = (data.value.timeSeries[0].values[0].value[0].value);
+					tmlevel = parseFloat(tmla);
+					}
+				});
+			tm.bindPopup("<h6>Twelvemile Bayou near Dixie, LA</h6><br><p>Gage height: " + tmlevel + " ft</p>");
 			
 			var fr = L.marker([32.56262689520695, -93.646943336587], {icon: greenIcon});
-			fr.on('popupopen', function(evt) {
-    				$.get("https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07349298&parameterCd=00065,63160&siteStatus=all",
-    				function(data) {
-				frh = evt.popup._contentNode.childNodes[0];
-        			$(frh).text("Flat River near Shed Rd near Bossier City Gage height: " + data.value.timeSeries[0].values[0].value[0].value + " ft");
-    				})
-			});
-			fr.bindPopup("<div id = 'custom-popup2'></div>");
+			var frlevel;
+			$.ajax({
+    				type: "GET",
+    				url: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07349298&parameterCd=00065&siteStatus=all",
+    				dataType: 'json',
+    				async: false,
+    				data: $(this).serialize(),
+    				success: function(data) {
+        				frla = (data.value.timeSeries[0].values[0].value[0].value);
+					frlevel = parseFloat(frla);
+					}
+				});
+			fr.bindPopup("<h6>Flat River near Shed Rd near Bossier City</h6><br><p>Gage height: " + frlevel + " ft</p>");
 			
 			var wc = L.marker([32.56524453867455, -93.68095817416412], {icon: greenIcon});
-			wc.on('popupopen', function(evt) {
-    				$.get("https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07349898&parameterCd=00065,63160&siteStatus=all",
-    				function(data) {
-				wch = evt.popup._contentNode.childNodes[0];
-        			$(wch).text("Willow Chute Bayou at Swan Lake Rd nr BC Gage height: " + data.value.timeSeries[0].values[0].value[0].value + " ft");
-    				})
-			});
-			wc.bindPopup("<div id = 'custom-popup2'></div>");
+			var wclevel;
+			$.ajax({
+    				type: "GET",
+    				url: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07349898&parameterCd=00065&siteStatus=all",
+    				dataType: 'json',
+    				async: false,
+    				data: $(this).serialize(),
+    				success: function(data) {
+        				wcla = (data.value.timeSeries[0].values[0].value[0].value);
+					wclevel = parseFloat(wcla);
+					}
+				});
+			wc.bindPopup("<h6>Willow Chute Bayou at Swan Lake Rd nr BC</h6><nr><p>Gage height: " + wclevel + " ft</p>");
 			
 			var rr = L.marker([32.51535633021526, -93.74037518409973], {icon: greenIcon});
-			rr.on('popupopen', function(evt) {
-    				$.get("https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07348500&parameterCd=00065,63160&siteStatus=all",
-    				function(data) {
-				rrh = evt.popup._contentNode.childNodes[0];
-        			$(rrh).text("Red River at Shreveport Gage height: " + data.value.timeSeries[0].values[0].value[0].value + " ft");
-    				})
-			});
-
-			rr.bindPopup("<div id = 'custom-popup'></div>");
+			var rrlevel;
+			$.ajax({
+    				type: "GET",
+    				url: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07348500&parameterCd=00065&siteStatus=all",
+    				dataType: 'json',
+    				async: false,
+    				data: $(this).serialize(),
+    				success: function(data) {
+        				rrla = (data.value.timeSeries[0].values[0].value[0].value);
+					rrlevel = parseFloat(rrla);
+					}
+				});
+			rr.bindPopup("<h6>Red River at Shreveport</h6><br><p>Gage height: " + rrlevel + " ft</p>");
 		
 			var gages = L.layerGroup([hosston, tm, fr, wc, rr]);
 		
