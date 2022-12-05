@@ -80,15 +80,17 @@ body {
 			
 				
 			var hosston = L.marker([32.89343195779419, -93.8208313147931], {icon: greenIcon});
-
-			hosston.on('popupopen', function(evt) {
-    				$.get("https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07344400&parameterCd=00065,63160&siteStatus=all",
-    				function(data) {
-				hh = evt.popup._contentNode.childNodes[0];
-        			$(hh).text("Red River near Hosston Gage height: " + data.value.timeSeries[0].values[0].value[0].value + " ft");
-    				})
-			});
-			hosston.bindPopup("<div id = 'custom-popup'></div>");
+			var hlevel;    
+			$.ajax({
+    				type: "GET",
+    				url: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07299540&parameterCd=00065,63160&siteStatus=all",
+    				dataType: 'json',
+    				async: false,
+    				data: $(this).serialize(),
+    				success: function(data) {
+        				hla = (data.value.timeSeries[0].values[0].value[0].value);
+					hlevel = hla;
+			hosston.bindPopup("<h6>Red River near Hosston, LA</h6><br><p>Gage height: " + hlevel + " ft</p>");
 			
 			var tm = L.marker([32.64564664818235, -93.87746100527966], {icon: greenIcon});
 			tm.on('popupopen', function(evt) {
