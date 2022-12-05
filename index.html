@@ -88,7 +88,7 @@ body {
     				data: $(this).serialize(),
     				success: function(data) {
         				hla = (data.value.timeSeries[0].values[0].value[0].value);
-					hlevel = parseFloat(hla);
+					hlevel = Number(hla);
 					}
 				});
 			var hosston_elev = 151.27
