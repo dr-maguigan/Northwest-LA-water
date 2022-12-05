@@ -78,7 +78,9 @@ body {
 			var redIcon = new pinIcon({iconUrl: 'red_pin.png'})
 			var greenIcon = new pinIcon({iconUrl: 'green_pin.png'})
 			
-				
+			var hosston_elev = 151.27
+			var hoss_wt = (hosston_elev + hlevel).toFixed(2);
+		
 			var hosston = L.marker([32.89343195779419, -93.8208313147931], {icon: greenIcon});
 			var hlevel;    
 			$.ajax({
@@ -92,7 +94,10 @@ body {
 					hlevel = parseFloat(hla);
 					}
 				});
-			hosston.bindPopup("<h6>Red River near Hosston, LA</h6><br><p>Gage height: " + hlevel + " ft</p>");
+			hosston.bindPopup("<h6>Red River near Hosston, LA</h6><br><p>Gage height: " + hlevel + " ft<br>Stream elevation: " + hoss_wt + " ft</p>");
+		
+			var tm_elev = 136.12
+			var tm_wt = (tm_elev + tmlevel).toFixed(2);
 			
 			var tm = L.marker([32.64564664818235, -93.87746100527966], {icon: greenIcon});
 			var tmlevel;
@@ -107,7 +112,10 @@ body {
 					tmlevel = parseFloat(tmla);
 					}
 				});
-			tm.bindPopup("<h6>Twelvemile Bayou near Dixie, LA</h6><br><p>Gage height: " + tmlevel + " ft</p>");
+			tm.bindPopup("<h6>Twelvemile Bayou near Dixie, LA</h6><br><p>Gage height: " + tmlevel + " ft<br>Stream elevation: " + tm_wt + " ft</p>");
+		
+			var fr_elev = 139.66
+			var fr_wt = (fr_elev + frlevel).toFixed(2);
 			
 			var fr = L.marker([32.56262689520695, -93.646943336587], {icon: greenIcon});
 			var frlevel;
@@ -122,8 +130,11 @@ body {
 					frlevel = parseFloat(frla);
 					}
 				});
-			fr.bindPopup("<h6>Flat River near Shed Rd near Bossier City</h6><br><p>Gage height: " + frlevel + " ft</p>");
+			fr.bindPopup("<h6>Flat River near Shed Rd near Bossier City</h6><br><p>Gage height: " + frlevel + " ft<br>Stream elevation: " + fr_wt + " ft</p>");
 			
+			var wc_elev = 157.44
+			var wc_wt = (wc_elev + wclevel).toFixed(2);
+		
 			var wc = L.marker([32.56524453867455, -93.68095817416412], {icon: greenIcon});
 			var wclevel;
 			$.ajax({
@@ -137,8 +148,11 @@ body {
 					wclevel = parseFloat(wcla);
 					}
 				});
-			wc.bindPopup("<h6>Willow Chute Bayou at Swan Lake Rd nr BC</h6><nr><p>Gage height: " + wclevel + " ft</p>");
+			wc.bindPopup("<h6>Willow Chute Bayou at Swan Lake Rd nr BC</h6><nr><p>Gage height: " + wclevel + " ft<br>Stream elevation: " + wc_wt + " ft</p>");
 			
+			var rr_elev = 131.48
+			var rr_wt = (rr_elev + rrlevel).toFixed(2);
+		
 			var rr = L.marker([32.51535633021526, -93.74037518409973], {icon: greenIcon});
 			var rrlevel;
 			$.ajax({
@@ -152,7 +166,7 @@ body {
 					rrlevel = parseFloat(rrla);
 					}
 				});
-			rr.bindPopup("<h6>Red River at Shreveport</h6><br><p>Gage height: " + rrlevel + " ft</p>");
+			rr.bindPopup("<h6>Red River at Shreveport</h6><br><p>Gage height: " + rrlevel + " ft<br>Stream elevation: " + rr_wt + " ft</p>");
 		
 			var gages = L.layerGroup([hosston, tm, fr, wc, rr]);
 		
