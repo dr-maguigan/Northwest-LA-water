@@ -78,9 +78,6 @@ body {
 			var redIcon = new pinIcon({iconUrl: 'red_pin.png'})
 			var greenIcon = new pinIcon({iconUrl: 'green_pin.png'})
 			
-			var hosston_elev = 151.27
-			var hoss_wt = (hosston_elev + hlevel).toFixed(2);
-		
 			var hosston = L.marker([32.89343195779419, -93.8208313147931], {icon: greenIcon});
 			var hlevel;    
 			$.ajax({
@@ -91,9 +88,11 @@ body {
     				data: $(this).serialize(),
     				success: function(data) {
         				hla = (data.value.timeSeries[0].values[0].value[0].value);
-					hlevel = hla;
+					hlevel = parseFloat(hla);
 					}
 				});
+			var hosston_elev = 151.27
+			var hoss_wt = (hosston_elev + hlevel).toFixed(2);
 			hosston.bindPopup("<h6>Red River near Hosston, LA</h6><br><p>Gage height: " + hlevel + " ft<br>Stream elevation: " + hoss_wt + " ft</p>");
 		
 			var tm_elev = 136.12
