@@ -91,7 +91,7 @@ body {
     				data: $(this).serialize(),
     				success: function(data) {
         				hla = (data.value.timeSeries[0].values[0].value[0].value);
-					hlevel = parseFloat(hla);
+					hlevel = hla;
 					}
 				});
 			hosston.bindPopup("<h6>Red River near Hosston, LA</h6><br><p>Gage height: " + hlevel + " ft<br>Stream elevation: " + hoss_wt + " ft</p>");
