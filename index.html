@@ -317,21 +317,7 @@ L.control.watermark({ position: 'bottomleft' }).addTo(map);
 		
 	
 </script>
-<script type="text/javascript">
-	
-	$('#query').click(function() {
-		site = $('#site').attr("value");
-		$.ajax({
-		  url: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07344400&parameterCd=00065,63160&siteStatus=all",
-		  dataType: 'json',
-		  data: '',
-		  success: function(json){
-			   $('#hosstonht').val(json.value.timeSeries[0].values[0].value[0].value);
-		  }
-		});
-	});
-//]]>
-</script>
+
 	 <p>Well level data represent the most recent readings collected by RRWMI at LSUS. Elevations are relative to NAVD (1988).</p>
 	 <p>River and stream gage heights are reported from USGS and are updated hourly.</p>
 	 <p><a href="https://www.lsus.edu/community/rrwmi">
