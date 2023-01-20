@@ -293,7 +293,7 @@ body {
 				"Stream Gauges": gages
 			};
 		
-			var layerControl = L.control.layers(overlayMaps).addTo(map);
+			var layerControl = L.control.layers(overlayMaps, {collapsed:false}).addTo(map);
 		
 			L.Control.Watermark = L.Control.extend({
     				onAdd: function(map) {
