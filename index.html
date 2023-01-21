@@ -79,7 +79,7 @@ body {
 			var pinIcon = L.Icon.extend({
     				options: {
         				iconSize:     [22, 47],
-        				iconAnchor:   [0,0],
+        				iconAnchor:   [11,47],
        					popupAnchor:  [0, -20]
     				}
 			});
@@ -295,8 +295,8 @@ body {
 				 layers: [osm, caddowells, bossierwells, gages]
 			});
 
-                        var tl = L.latLng(32.913, -93.8);
-                        var br = L.latLng(32.4425, -93.75);
+                        var tl = L.latLng(32.895, -93.96);
+                        var br = L.latLng(32.2425, -93.7);
                         bounds = L.latLngBounds(tl, br);
                         map.fitBounds(bounds);
 
