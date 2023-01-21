@@ -294,7 +294,12 @@ body {
 				 zoom: 10,
 				 layers: [osm, caddowells, bossierwells, gages]
 			});
-		
+
+                        var tl = L.latLng(32.913, -94.0);
+                        var br = L.latLng(32.3575, -93.6367);
+                        bounds = L.latLngBounds(tl, br);
+                        map.fitBounds(bounds);
+
 			var overlayMaps = {
 				"All Data Sources": allLayers,
 				"Bossier Parish Wells": bossierwells,
