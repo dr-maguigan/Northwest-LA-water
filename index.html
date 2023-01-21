@@ -79,8 +79,8 @@ body {
 			var pinIcon = L.Icon.extend({
     				options: {
         				iconSize:     [22, 47],
-        				iconAnchor:   [22, 94],
-       					popupAnchor:  [-3, -76]
+        				iconAnchor:   [0,0],
+       					popupAnchor:  [0, -20]
     				}
 			});
 			var yellowIcon = new pinIcon({iconUrl: 'yellow_pin.png'})
@@ -296,7 +296,7 @@ body {
 			});
 
                         var tl = L.latLng(32.913, -93.8);
-                        var br = L.latLng(32.4425, -93.72);
+                        var br = L.latLng(32.4425, -93.75);
                         bounds = L.latLngBounds(tl, br);
                         map.fitBounds(bounds);
 
