@@ -295,9 +295,9 @@ body {
 				 layers: [osm, caddowells, bossierwells, gages]
 			});
 
-                        var tl = L.latLng(32.895, -93.96);
-                        var br = L.latLng(32.2425, -93.7);
-                        bounds = L.latLngBounds(tl, br);
+                        var bl = L.latLng(32.905, -93.69);
+                        var tr = L.latLng(32.2425, -93.96);
+                        bounds = L.latLngBounds(tr, bl);
                         map.fitBounds(bounds);
 
 			var overlayMaps = {
