@@ -12,9 +12,12 @@ var pinIcon = L.Icon.extend({
 });
 
 //create different icons for different feature layers
-var yellowIcon = new pinIcon({iconUrl: 'yellow_pin.png'})
-var redIcon = new pinIcon({iconUrl: 'red_pin.png'})
-var greenIcon = new pinIcon({iconUrl: 'green_pin.png'})
+var yellowIcon = new pinIcon({iconUrl: 'img/yellow_pin.png'})
+yellowIcon.alt = "Bossier Well Marker";
+var redIcon = new pinIcon({iconUrl: 'img/red_pin.png'})
+redIcon.alt = "Caddo Well Marker";
+var greenIcon = new pinIcon({iconUrl: 'img/green_pin.png'})
+greenIcon.alt = "USGS Gage Marker";
 
 //create hosston marker, assign it green (USGS)
 var hosston = L.marker([32.89343195779419, -93.8208313147931], {icon: greenIcon});
