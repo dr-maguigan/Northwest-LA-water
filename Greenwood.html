@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Historical Data for Greenwood</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	#footer_container
+{
+    bottom: 0;
+    height: 4.0em;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    text-align:center;
+    color: black;
+ text-decoration: none;
+}
+a {
+ color: black;
+ text-decoration: none;
+}
+a:hover {
+ color: purple;
+}
+* {
+  box-sizing: border-box;
+}
+
+ h2 {text-align: center;
+ margin: 0.2em 0;}
+  h3 {text-align: center;
+  margin: 0.05em 0;}
+
+#myInput {
+  
+  width: 80%;
+  font-size: 100%;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#mylist {
+  
+  width: 100%;
+  font-size: 100%;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+	margin-left: auto; 
+  margin-right: auto;
+  border-collapse: collapse;
+  width: 85%;
+  border: 1px solid #ddd;
+  font-size: 100%;
+}
+
+#myTable th, {
+  text-align: center;
+  padding: 15px;
+}
+#myTable td {
+text-align: center;
+  padding: 8px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+#myTable td:first-child {
+    border-left: none;
+}
+
+#myTable td:last-child {
+    border-right: none;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+.dropbtn {
+background-color: #77C3EC;
+color: white;
+padding: 16px;
+font-size: 100%;
+border: none;
+}
+
+.dropdown {
+position: relative;
+display: inline-block;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f1f1f1;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown-content a {
+color: black;
+font-size: 90%;
+padding: 10px 12px;
+text-decoration: none;
+display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e6e8e;}
+</style>
+</head>
+<body>
+<div class="dropdown">
+	<button class="dropbtn">Well Selection</button>
+		<div class="dropdown-content">
+			<a href="https://dr-maguigan.github.io/Northwest-LA-water/Blanchard.html#">Blanchard</a>
+			<a href="https://dr-maguigan.github.io/Northwest-LA-water/Eddie-Jones-Park.html#">Eddie Jones Park</a>
+			<a href="https://dr-maguigan.github.io/Northwest-LA-water/Greenwood.html#">Greenwood</a>
+			<a href="https://dr-maguigan.github.io/Northwest-LA-water/Hannahs-Park.html#">Hannah's Park</a>
+			<a href="https://dr-maguigan.github.io/Northwest-LA-water/Keithville.html#">Keithville</a>
+			<a href="https://dr-maguigan.github.io/Northwest-LA-water/Mayo-Rd.html#">Mayo Rd</a>
+			<a href="https://dr-maguigan.github.io/Northwest-LA-water/South-Camp.html#">South Camp</a>
+			<a href="https://dr-maguigan.github.io/Northwest-LA-water/Wallace-Lake.html#">Wallace Lake</a>
+			<a href="https://dr-maguigan.github.io/Northwest-LA-water/Walter-B-Jacobs.html#">Walter B Jacobs</a>
+		</div>
+</div>
+<h2>Historical Data for Greenwood</h2>
+<h3>Elevation: 267.76 ft</h3>
+<table class = "center">
+<table id="myTable">
+<tr class="header">
+    <th style="width:10%;"> </th>
+    <th colspan="2" style="width:10%;">2008</th>
+    <th colspan="2"style="width:10%;">2009</th>
+    <th colspan="2"style="width:10%;">2010</th>
+    <th colspan="2" style="width:10%;">2011</th>
+    <th colspan="2"style="width:10%;">2012</th>
+    <th colspan="2"style="width:10%;">2013</th>
+    <th colspan="2"style="width:10%;">2014</th>
+    <th colspan="2" style="width:10%;">2015</th>
+    <th colspan="2"style="width:10%;">2016</th>
+    <th colspan="2"style="width:10%;">2017</th>
+    <th colspan="2"style="width:10%;">2018</th>
+    <th colspan="2" style="width:10%;">2019</th>
+    <th colspan="2"style="width:10%;">2020</th>
+    <th colspan="2"style="width:10%;">2021</th>
+    <th colspan="2"style="width:10%;">2022</th>
+  </tr>
+  <tr class="header">
+      <th align="left" style="width:10%;">Month</th>
+      <th style="width:8.75%;">Depth</th>
+      <th style="width:8.75%;">Elevation</th>
+      <th style="width:8.75%;">Depth</th>
+      <th style="width:8.75%;">Elevation</th>
+      <th style="width:8.75%;">Depth</th>
+      <th style="width:8.75%;">Elevation</th>
+      <th style="width:8.75%;">Depth</th>
+      <th style="width:8.75%;">Elevation</th>
+      <th style="width:8.75%;">Depth</th>
+      <th style="width:8.75%;">Elevation</th>
+      <th style="width:8.75%;">Depth</th>
+      <th style="width:8.75%;">Elevation</th>
+      <th style="width:8.75%;">Depth</th>
+      <th style="width:8.75%;">Elevation</th>
+      <th style="width:8.75%;">Depth</th>
+      <th style="width:8.75%;">Elevation</th>
+      <th style="width:8.75%;">Depth</th>
+      <th style="width:8.75%;">Elevation</th>
+      <th style="width:8.75%;">Depth</th>
+      <th style="width:8.75%;">Elevation</th>
+      <th style="width:8.75%;">Depth</th>
+      <th style="width:8.75%;">Elevation</th>
+      <th style="width:8.75%;">Depth</th>
+      <th style="width:8.75%;">Elevation</th>
+      <th style="width:8.75%;">Depth</th>
+      <th style="width:8.75%;">Elevation</th>
+      <th style="width:8.75%;">Depth</th>
+      <th style="width:8.75%;">Elevation</th>
+      <th style="width:8.75%;">Depth</th>
+      <th style="width:8.75%;">Elevation</th>
+  </tr>
+  <tr>
+    <th scope="row" align="left">January</th>
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td>54.6</td> 
+    <td>213.16</td> 
+    <td>52.37</td> 
+    <td>215.39</td> 
+    <td>54.08</td> 
+    <td>213.68</td> 
+    <td>51.89</td> 
+    <td>215.87</td> 
+    <td>52.49</td> 
+    <td>215.27</td> 
+    <td>50.87</td> 
+    <td>216.89</td> 
+    <td>50.4</td> 
+    <td>231.72</td> 
+    <td>48.9</td> 
+    <td>233.22</td> 
+    <td></td> 
+    <td></td> 
+    <td>47.7</td> 
+    <td>234.42</td> 
+    <td>47.9</td> 
+    <td>234.22</td>
+</tr>
+<tr>
+  <th scope="row" align="left">February</th>
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td>56.45</td> 
+    <td>211.31</td> 
+    <td>53.31</td> 
+    <td>214.45</td> 
+    <td>51.94</td> 
+    <td>215.82</td> 
+    <td>52.95</td> 
+    <td>214.81</td> 
+    <td></td> 
+    <td></td> 
+    <td>50.88</td> 
+    <td>216.88</td> 
+    <td>48.94</td> 
+    <td>218.82</td> 
+    <td>49.3</td> 
+    <td>232.82</td> 
+    <td>47.9</td> 
+    <td>234.22</td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td>
+</tr>
+<tr>
+  <th scope="row" align="left">March</th>
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td>52.41</td> 
+    <td>215.35</td> 
+    <td>51.23</td> 
+    <td>216.53</td> 
+    <td></td> 
+    <td></td> 
+    <td>49.28</td> 
+    <td>218.48</td> 
+    <td>49.78</td> 
+    <td>217.98</td> 
+    <td>49.25</td> 
+    <td>218.51</td> 
+    <td>48.8</td> 
+    <td>48.8</td> 
+    <td>47.5</td> 
+    <td>234.62</td> 
+    <td></td> 
+    <td></td> 
+    <td>47.7</td> 
+    <td>234.42</td> 
+    <td></td> 
+    <td></td>
+</tr>
+<tr>
+  <th scope="row" align="left">April</th>
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td>55.89</td> 
+    <td>211.87</td> 
+    <td>52.28</td> 
+    <td>215.48</td> 
+    <td>50.98</td> 
+    <td>216.78</td> 
+    <td></td> 
+    <td></td> 
+    <td>48.69</td> 
+    <td>219.07</td> 
+    <td></td> 
+    <td></td> 
+    <td>49.95</td> 
+    <td>217.81</td> 
+    <td>48.5</td> 
+    <td>233.62</td> 
+    <td>47.2</td> 
+    <td>234.92</td> 
+    <td>46.7</td> 
+    <td>235.42</td> 
+    <td></td> 
+    <td></td> 
+    <td>47</td> 
+    <td>235.12</td>
+</tr>
+<tr>
+  <th scope="row" align="left">May</th>
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td>56.38</td> 
+    <td>211.38</td> 
+    <td>55.64</td> 
+    <td>212.12</td> 
+    <td>51.78</td> 
+    <td>215.98</td> 
+    <td>51.62</td> 
+    <td>216.14</td> 
+    <td>48.61</td> 
+    <td>219.15</td> 
+    <td>50.05</td> 
+    <td>217.71</td> 
+    <td>50.1</td> 
+    <td>217.66</td> 
+    <td>51.7</td> 
+    <td>230.42</td> 
+    <td>47.3</td> 
+    <td>234.82</td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td>
+</tr>
+<tr>
+  <th scope="row" align="left">June</th>
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td>63.34</td> 
+    <td>204.42</td> 
+    <td>62.23</td> 
+    <td>205.53</td> 
+    <td>52.9</td> 
+    <td>214.86</td> 
+    <td>55.4</td> 
+    <td>212.36</td> 
+    <td>50.22</td> 
+    <td>217.54</td> 
+    <td>51.11</td> 
+    <td>216.65</td> 
+    <td>53.9</td> 
+    <td>228.22</td> 
+    <td>57.3</td> 
+    <td>224.82</td> 
+    <td>45.3</td> 
+    <td>236.82</td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td>
+</tr>
+<tr>
+  <th scope="row" align="left">July</th>
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td>62.9</td> 
+    <td>204.86</td> 
+    <td>59.73</td> 
+    <td>208.03</td> 
+    <td>59.38</td> 
+    <td>208.38</td> 
+    <td>59.21</td> 
+    <td>208.55</td> 
+    <td>59.93</td> 
+    <td>207.83</td> 
+    <td>54.3</td> 
+    <td>227.82</td> 
+    <td>58.4</td> 
+    <td>223.72</td> 
+    <td>43.7</td> 
+    <td>238.42</td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td>
+</tr>
+<tr>
+  <th scope="row" align="left">August</th>
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td>64.58</td> 
+    <td>203.18</td> 
+    <td>60.4</td> 
+    <td>207.36</td> 
+    <td>58.03</td> 
+    <td>209.73</td> 
+    <td>62.74</td> 
+    <td>205.02</td> 
+    <td>55.6</td> 
+    <td>212.16</td> 
+    <td>52.7</td> 
+    <td>229.42</td> 
+    <td>60.4</td> 
+    <td>221.72</td> 
+    <td>37.7</td> 
+    <td>244.42</td> 
+    <td>53.9</td> 
+    <td>228.22</td> 
+    <td></td> 
+    <td></td> 
+    <td>56.6</td> 
+    <td>225.52</td>
+</tr>
+<tr>
+  <th scope="row" align="left">September</th>
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td>62.36</td> 
+    <td>205.4</td> 
+    <td>68.76</td> 
+    <td>199</td> 
+    <td>63.89</td> 
+    <td>203.87</td> 
+    <td>61.95</td> 
+    <td>205.81</td> 
+    <td>56.97</td> 
+    <td>210.79</td> 
+    <td>55.3</td> 
+    <td>226.82</td> 
+    <td>56.25</td> 
+    <td>225.87</td> 
+    <td>38.4</td> 
+    <td>243.72</td> 
+    <td>50.8</td> 
+    <td>216.96</td> 
+    <td></td> 
+    <td></td> 
+    <td>53.2</td> 
+    <td>228.92</td>
+</tr>
+<tr>
+  <th scope="row" align="left">October</th>
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td>61.9</td> 
+    <td>205.86</td> 
+    <td>65.31</td> 
+    <td>202.45</td> 
+    <td>59.8</td> 
+    <td>207.96</td> 
+    <td>61.07</td> 
+    <td>206.69</td> 
+    <td>59.48</td> 
+    <td>208.28</td> 
+    <td>63.16</td> 
+    <td>204.6</td> 
+    <td>56.53</td> 
+    <td>211.23</td> 
+    <td>54.58</td> 
+    <td>227.54</td> 
+    <td>52.9</td> 
+    <td>225.87</td> 
+    <td>40.5</td> 
+    <td>241.62</td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td>
+</tr>
+<tr>
+  <th scope="row" align="left">November</th>
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td>56.58</td> 
+    <td>211.18</td> 
+    <td>59.54</td> 
+    <td>208.22</td> 
+    <td>56.37</td> 
+    <td>211.39</td> 
+    <td>59.15</td> 
+    <td>208.61</td> 
+    <td></td> 
+    <td></td> 
+    <td>56.04</td> 
+    <td>211.72</td> 
+    <td>52.68</td> 
+    <td>215.08</td> 
+    <td>51.99</td> 
+    <td>230.13</td> 
+    <td>50.5</td> 
+    <td>231.62</td> 
+    <td>44.25</td> 
+    <td>237.87</td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td>
+</tr>
+<tr>
+  <th scope="row" align="left">December</th>
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td>57.28</td> 
+    <td>210.48</td> 
+    <td>54.29</td> 
+    <td>213.47</td> 
+    <td>55.39</td> 
+    <td>212.37</td> 
+    <td></td> 
+    <td></td> 
+    <td>53.15</td> 
+    <td>211.72</td> 
+    <td>51.13</td> 
+    <td>216.63</td> 
+    <td>50.6</td> 
+    <td>231.52</td> 
+    <td>49.2</td> 
+    <td>232.92</td> 
+    <td>45.2</td> 
+    <td>236.92</td> 
+    <td>48.8</td> 
+    <td>218.96</td> 
+    <td></td> 
+    <td></td> 
+    <td></td> 
+    <td></td>
+</tr>
+</table>
+	
+	<div id="footer_container">
+    <a href="Greenwood.xlsx" download>Download Greenwood Data</a>
+    <p></p>
+	  <a href="Caddo_Wells.xlsx" download>Download All Caddo Well Data</a>
+</div>
+</body>
+</html>
