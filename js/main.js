@@ -289,7 +289,7 @@ var layerControl = L.control.layers(overlayMaps, null, {collapsed:false}).addTo(
 L.Control.Watermark = L.Control.extend({
     	onAdd: function(map) {
         	var img = L.DomUtil.create('img');
-			img.src = "text_next_to_logo.png";
+			img.src = "img/text_next_to_logo.png";
         		img.style.width = '1200px';
 			img.alt = "Red River Watershed Management Institute Logo"
 
