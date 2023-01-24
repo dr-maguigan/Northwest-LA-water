@@ -270,7 +270,7 @@ var map = L.map('map', {
 
 //create topright and bottom left points for fitbounds to help map on either desktop or mobile
 var tr = L.latLng(32.925, -93.69);
-var bl = L.latLng(32.2525, -93.96);
+var bl = L.latLng(32.2725, -93.96);
 var bounds = L.latLngBounds(tr, bl);
 map.fitBounds(bounds);
 
