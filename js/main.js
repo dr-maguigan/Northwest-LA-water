@@ -122,60 +122,60 @@ var gages = L.layerGroup([hosston, tm, fr, wc, rr]);
 
 //create variables for caddo well info to add to markers below, will be set up to retrieve continuous updating later	
 //walter b jacobs
-var wbj_elev = 207.17
-var wbj_depth = 15.7
+var wbj_elev = 204.9
+var wbj_depth = (15.6 - 2.22)
 var wbj_wt = (wbj_elev - wbj_depth).toFixed(2); //calculate water table elevation
 
 //hannahs park
-var hp_elev = 201.72
-var hp_depth = 66.8
+var hp_elev = 199.36
+var hp_depth = (64.5 - 2.36)
 var hp_wt = (hp_elev - hp_depth).toFixed(2);
 
 //mayo road
-var mr_elev = 195.96
-var mr_depth = 93.0
+var mr_elev = 193.5
+var mr_depth = (89.9 - 2.46)
 var mr_wt = (mr_elev - mr_depth).toFixed(2);
 
 //keithville
-var kv_elev = 200.7
-var kv_depth = 75.9
+var kv_elev = 197.44
+var kv_depth = (74.5 -2.63)
 var kv_wt = (kv_elev - kv_depth).toFixed(2);
 
 //south camp
-var sc_elev = 282.12
-var sc_depth = 53.2
+var sc_elev = 279.35
+var sc_depth = (29.9 - 2.77)
 var sc_wt = (sc_elev - sc_depth).toFixed(2);
 
 //wallace lake
-var wl_elev = 164.71
-var wl_depth = 24.4
+var wl_elev = 161.51
+var wl_depth = (23.4 -3.2)
 var wl_wt = (wl_elev - wl_depth).toFixed(2);
 
 //blanchard
-var b_elev = 230.21
-var b_depth = 7.9
+var b_elev = 226.75
+var b_depth = (7.4 - 3.46)
 var b_wt = (b_elev - b_depth).toFixed(2);
 
 //greenwood
-var gw_elev = 282.12
-var gw_depth = 53.2
+var gw_elev = 264.15
+var gw_depth = (49.4 - 3.61)
 var gw_wt = (gw_elev - gw_depth).toFixed(2);
 
 //eddie jones park
-var ejp_elev = 251.3
-var ejp_depth = 17.0
+var ejp_elev = 247.99
+var ejp_depth = (14.6 - 3.31)
 var ejp_wt = (ejp_elev - ejp_depth).toFixed(2);
 			
 //create markers and add in data for popups
-var wbj = L.marker([32.56717, -93.93314], {icon: redIcon}).bindPopup("<h6><b>Walter B. Jacobs Park</b></h6><br><p>Elevation: 193.47 ft<br>Depth below surface: " + wbj_depth + " ft<br>Water table elevation: " + wbj_wt + " ft</p><br><a href='https://dr-maguigan.github.io/Northwest-LA-water/Walter-B-Jacobs.html#' target='_blank' rel='noopener noreferrer'>Historical Data</a>");
-var hp = L.marker([32.35892, -93.6911], {icon: redIcon}).bindPopup("<h6><b>Hannah's Park</b></h6><br><p>Elevation: 201.72 ft<br>Depth below surface: " + hp_depth + " ft<br>Water table elevation: " + hp_wt + " ft</p><br><a href='https://dr-maguigan.github.io/Northwest-LA-water/Hannahs-Park.html#' target='_blank' rel='noopener noreferrer'>Historical Data</a>");
-var mr = L.marker([32.37806, -93.74217], {icon: redIcon}).bindPopup("<h6><b>Mayo Rd</b></h6><br><p>Elevation: 195.96 ft<br>Depth below surface: " + mr_depth + " ft<br>Water table elevation: " + mr_wt + " ft</p><br><a href='https://dr-maguigan.github.io/Northwest-LA-water/Mayo-Rd.html#' target='_blank' rel='noopener noreferrer'>Historical Data</a>");
-var kv = L.marker([32.33322, -93.83894], {icon: redIcon}).bindPopup("<h6><b>Keithville</b></h6><br><p>Elevation: 200.7 ft<br>Depth below surface: " + kv_depth + " ft<br>Water table elevation: " + kv_wt + " ft</p><br><a href='https://dr-maguigan.github.io/Northwest-LA-water/Keithville.html#' target='_blank' rel='noopener noreferrer'>Historical Data</a>");
-var sc = L.marker([32.31394, -93.94589], {icon: redIcon}).bindPopup("<h6><b>South Camp</b></h6><br><p>Elevation: 282.12 ft<br>Depth below surface: " + sc_depth + " ft<br>Water table elevation: " + sc_wt + " ft</p><br><a href='https://dr-maguigan.github.io/Northwest-LA-water/South-Camp.html#' target='_blank' rel='noopener noreferrer'>Historical Data</a>");
-var wl = L.marker([32.32269, -93.71125], {icon: redIcon}).bindPopup("<h6><b>Wallace Lake</b></h6><br><p>Elevation: 164.71 ft<br>Depth below surface: " + wl_depth + " ft<br>Water table elevation: " + wl_wt + " ft</p><br><a href='https://dr-maguigan.github.io/Northwest-LA-water/Wallace-Lake.html#' target='_blank' rel='noopener noreferrer'>Historical Data</a>");
-var b = L.marker([32.59381, -93.89786], {icon: redIcon}).bindPopup("<h6><b>Blanchard</b></h6><br><p>Elevation: 230.21 ft<br>Depth below surface: " + b_depth + " ft<br>Water table elevation: " + b_wt + " ft</p><br><a href='https://dr-maguigan.github.io/Northwest-LA-water/Blanchard.html#' target='_blank' rel='noopener noreferrer'>Historical Data</a>");
-var gw = L.marker([32.42542, -93.93969], {icon: redIcon}).bindPopup("<h6><b>Greenwood</b></h6><br><p>Elevation: 282.12 ft<br>Depth below surface: " + gw_depth + " ft<br>Water table elevation: " + gw_wt + " ft</p><br><a href='https://dr-maguigan.github.io/Northwest-LA-water/Greenwood.html#' target='_blank' rel='noopener noreferrer'>Historical Data</a>");
-var ejp = L.marker([32.2661755, -93.9404097], {icon: redIcon}).bindPopup("<h6><b>Eddie Jones Park</b></h6><br><p>Elevation: 251.3 ft<br>Depth below surface: " + ejp_depth + " ft<br>Water table elevation: " + ejp_wt + " ft</p><br><a href='https://dr-maguigan.github.io/Northwest-LA-water/Eddie-Jones-Park.html#' target='_blank' rel='noopener noreferrer'>Historical Data</a>");
+var wbj = L.marker([32.56717, -93.93314], {icon: redIcon}).bindPopup("<h6><b>Walter B. Jacobs Park</b></h6><br><p>Elevation: 204.9 ft<br>Depth below surface: " + wbj_depth + " ft<br>Water table elevation: " + wbj_wt + " ft</p><br><a href='https://dr-maguigan.github.io/Northwest-LA-water/Walter-B-Jacobs.html#' target='_blank' rel='noopener noreferrer'>Historical Data</a>");
+var hp = L.marker([32.35892, -93.6911], {icon: redIcon}).bindPopup("<h6><b>Hannah's Park</b></h6><br><p>Elevation: 199.36 ft<br>Depth below surface: " + hp_depth + " ft<br>Water table elevation: " + hp_wt + " ft</p><br><a href='https://dr-maguigan.github.io/Northwest-LA-water/Hannahs-Park.html#' target='_blank' rel='noopener noreferrer'>Historical Data</a>");
+var mr = L.marker([32.37806, -93.74217], {icon: redIcon}).bindPopup("<h6><b>Mayo Rd</b></h6><br><p>Elevation: 193.5 ft<br>Depth below surface: " + mr_depth + " ft<br>Water table elevation: " + mr_wt + " ft</p><br><a href='https://dr-maguigan.github.io/Northwest-LA-water/Mayo-Rd.html#' target='_blank' rel='noopener noreferrer'>Historical Data</a>");
+var kv = L.marker([32.33322, -93.83894], {icon: redIcon}).bindPopup("<h6><b>Keithville</b></h6><br><p>Elevation: 197.44 ft<br>Depth below surface: " + kv_depth + " ft<br>Water table elevation: " + kv_wt + " ft</p><br><a href='https://dr-maguigan.github.io/Northwest-LA-water/Keithville.html#' target='_blank' rel='noopener noreferrer'>Historical Data</a>");
+var sc = L.marker([32.31394, -93.94589], {icon: redIcon}).bindPopup("<h6><b>South Camp</b></h6><br><p>Elevation: 279.35 ft<br>Depth below surface: " + sc_depth + " ft<br>Water table elevation: " + sc_wt + " ft</p><br><a href='https://dr-maguigan.github.io/Northwest-LA-water/South-Camp.html#' target='_blank' rel='noopener noreferrer'>Historical Data</a>");
+var wl = L.marker([32.32269, -93.71125], {icon: redIcon}).bindPopup("<h6><b>Wallace Lake</b></h6><br><p>Elevation: 161.51 ft<br>Depth below surface: " + wl_depth + " ft<br>Water table elevation: " + wl_wt + " ft</p><br><a href='https://dr-maguigan.github.io/Northwest-LA-water/Wallace-Lake.html#' target='_blank' rel='noopener noreferrer'>Historical Data</a>");
+var b = L.marker([32.59381, -93.89786], {icon: redIcon}).bindPopup("<h6><b>Blanchard</b></h6><br><p>Elevation: 226.75 ft<br>Depth below surface: " + b_depth + " ft<br>Water table elevation: " + b_wt + " ft</p><br><a href='https://dr-maguigan.github.io/Northwest-LA-water/Blanchard.html#' target='_blank' rel='noopener noreferrer'>Historical Data</a>");
+var gw = L.marker([32.42542, -93.93969], {icon: redIcon}).bindPopup("<h6><b>Greenwood</b></h6><br><p>Elevation: 264.15 ft<br>Depth below surface: " + gw_depth + " ft<br>Water table elevation: " + gw_wt + " ft</p><br><a href='https://dr-maguigan.github.io/Northwest-LA-water/Greenwood.html#' target='_blank' rel='noopener noreferrer'>Historical Data</a>");
+var ejp = L.marker([32.2661755, -93.9404097], {icon: redIcon}).bindPopup("<h6><b>Eddie Jones Park</b></h6><br><p>Elevation: 247.99 ft<br>Depth below surface: " + ejp_depth + " ft<br>Water table elevation: " + ejp_wt + " ft</p><br><a href='https://dr-maguigan.github.io/Northwest-LA-water/Eddie-Jones-Park.html#' target='_blank' rel='noopener noreferrer'>Historical Data</a>");
 
 //create layergroup for caddo wells for layer control
 var caddowells = L.layerGroup([wbj, hp, mr, kv, sc, wl, b, gw, ejp]);
@@ -183,42 +183,42 @@ var caddowells = L.layerGroup([wbj, hp, mr, kv, sc, wl, b, gw, ejp]);
 //create variables for bossier wells, later efforts will be to add ability to update telemetried wells continously and to derive calculations to estimate based on telemetried well levels
 //north airline acres
 var naa_elev = 171.5
-var naa_depth = 6.2
+var naa_depth = (3.8 - 2.87)
 var naa_wt = (naa_elev - naa_depth).toFixed(2);
 	
 //belle rose at legacy
 var brl_elev = 168.8
-var brl_depth = 6.9
+var brl_depth = (5.2 - 2.9)
 var brl_wt = (brl_elev - brl_depth).toFixed(2);
 
 //north-south corridor
 var nsc_elev = 165.97
-var nsc_depth = 10.1
+var nsc_depth = 3.1
 var nsc_wt = (nsc_elev - nsc_depth).toFixed(2);
 
 //flat river well
 var frbc_elev = 168.06
-var frbc_depth = 8.3
+var frbc_depth = (5.0 - 2.78)
 var frbc_wt = (frbc_elev - frbc_depth).toFixed(2);
 
 //willow chute well
 var wcbc_elev = 168.46
-var wcbc_depth = 10.2
+var wcbc_depth = (9.0 - 2.84)
 var wcbc_wt = (wcbc_elev - wcbc_depth).toFixed(2);
 			
 //oak creek well
 var oc_elev = 172.63
-var oc_depth = 10.1
+var oc_depth = (5.8 - 2.72)
 var oc_wt = (oc_elev - oc_depth).toFixed(2);
 
 //rosedale place			
 var rp_elev = 171.3
-var rp_depth = 7.4
+var rp_depth = (5.8 - 2.36)
 var rp_wt = (rp_elev - rp_depth).toFixed(2);
 
 //bossier tennis courts
 var btc_elev = 171.89
-var btc_depth = 13.3
+var btc_depth = (10.4 - 2.48)
 var btc_wt = (btc_elev - btc_depth).toFixed(2);
 
 //sewage treatment plant
@@ -228,17 +228,17 @@ var sp_wt = (sp_elev - sp_depth).toFixed(2);
 
 //cypress bend
 var cb_elev = 175.79
-var cb_depth = 10.7
+var cb_depth = (9.1 - 2.5)
 var cb_wt = (cb_elev - cb_depth).toFixed(2);
 
 //kingston plantation
 var kp_elev = 173.4
-var kp_depth = 6.7
+var kp_depth = (4.0 - 2.49)
 var kp_wt = (kp_elev - kp_depth).toFixed(2);
 
 //autumn place
 var ap_elev = 175.0
-var ap_depth = 6.3
+var ap_depth = (4.1 - 2.77)
 var ap_wt = (ap_elev - ap_depth).toFixed(2);
 
 //create markers for bossier wells and add info into popups
