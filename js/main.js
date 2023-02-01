@@ -123,7 +123,7 @@ var gages = L.layerGroup([hosston, tm, fr, wc, rr]);
 //create variables for caddo well info to add to markers below, will be set up to retrieve continuous updating later	
 //walter b jacobs
 var wbj_elev = 204.9
-var wbj_depth = (15.6 - 2.22).toFixed(2);
+var wbj_depth = (15.6 - 2.27).toFixed(2);
 var wbj_wt = (wbj_elev - wbj_depth).toFixed(2); //calculate water table elevation
 
 //hannahs park
