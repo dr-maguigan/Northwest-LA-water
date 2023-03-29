@@ -181,65 +181,67 @@ var ejp = L.marker([32.2661755, -93.9404097], {icon: redIcon}).bindPopup("<h6><b
 var caddowells = L.layerGroup([wbj, hp, mr, kv, sc, wl, b, gw, ejp]);
 
 //create variables for bossier wells, later efforts will be to add ability to update telemetried wells continously and to derive calculations to estimate based on telemetried well levels
+//willow chute well
+var wcbc_elev = 168.46
+var wcbc_depth = (4.84 - 2.84).toFixed(2);
+var wcbc_wt = (wcbc_elev - wcbc_depth).toFixed(2);
+
 //north airline acres
 var naa_elev = 171.5
-var naa_depth = (3.8 - 2.87)
-var naa_wt = (naa_elev - naa_depth).toFixed(2);
+var naa_wt = (0.9803 * wcbc_wt + 10.159).toFixed(2);
+var naa_depth = (naa_elev - naa_wt - 0.03).toFixed(2); //addition or subtraction is for the difference between height of the casing above ground level for each site compared to Willow Chute
 	
 //belle rose at legacy
 var brl_elev = 168.8
-var brl_depth = (5.2 - 2.9)
-var brl_wt = (brl_elev - brl_depth).toFixed(2);
+var brl_wt = (0.694 * wcbc_wt+ 52.419).toFixed(2);
+var brl_depth = (brl_elev - brl_wt -0.06).toFixed(2);
 
 //north-south corridor
 var nsc_elev = 165.97
-var nsc_depth = 3.1
-var nsc_wt = (nsc_elev - nsc_depth).toFixed(2);
+var nsc_wt = (1.3253 * wcbc_wt - 53.512).toFixed(2);
+var nsc_depth = (nsc_elev - nsc_wt).toFixed(2);
 
 //flat river well
 var frbc_elev = 168.06
-var frbc_depth = (5.0 - 2.78)
-var frbc_wt = (frbc_elev - frbc_depth).toFixed(2);
-
-//willow chute well
-var wcbc_elev = 168.46
-var wcbc_depth = (9.0 - 2.84)
-var wcbc_wt = (wcbc_elev - wcbc_depth).toFixed(2);
+var frbc_wt = (1.2547 * wcbc_wt - 39.461).toFixed(2);
+var frbc_depth = (frbc_elev - frbc_wt + 0.06).toFixed(2);
 			
 //oak creek well
 var oc_elev = 172.63
-var oc_depth = (5.8 - 2.72)
-var oc_wt = (oc_elev - oc_depth).toFixed(2);
+var oc_wt = (1.1219 * wcbc_wt - 14.541).toFixed(2);
+var oc_depth = (oc_elev - oc_wt + 0.08).toFixed(2);
 
 //rosedale place			
 var rp_elev = 171.3
-var rp_depth = (5.8 - 2.36)
-var rp_wt = (rp_elev - rp_depth).toFixed(2);
+var rp_wt = (1.4024 * wcbc_wt - 63.021).toFixed(2);
+var rp_depth = (rp_elev - rp_wt + 0.48).toFixed(2);
 
 //bossier tennis courts
 var btc_elev = 171.89
-var btc_depth = (10.4 - 2.48)
-var btc_wt = (btc_elev - btc_depth).toFixed(2);
+var btc_wt = (0.8364 * wcbc_wt + 32.01).toFixed(2);
+var btc_depth = (btc_elev - btc_wt +0.36).toFixed(2);
 
 //sewage treatment plant
 var sp_elev = 176.9
-var sp_depth = 0
+var sp_depth = 0.00
 var sp_wt = (sp_elev - sp_depth).toFixed(2);
 
 //cypress bend
 var cb_elev = 175.79
-var cb_depth = (9.1 - 2.5)
-var cb_wt = (cb_elev - cb_depth).toFixed(2);
+var cb_wt = (1.1942 * wcbc_wt - 23.647).toFixed(2);
+var cb_depth = (cb_elev - cb_wt + 0.34).toFixed(2);
 
 //kingston plantation
 var kp_elev = 173.4
-var kp_depth = (4.0 - 2.49)
-var kp_wt = (kp_elev - kp_depth).toFixed(2);
+var kp_wt = (0.7364 * wcbc_wt + 50.435).toFixed(2);
+var kp_depth = (kp_elev - kp_wt + 0.35).toFixed(2);
+
 
 //autumn place
 var ap_elev = 175.0
-var ap_depth = (4.1 - 2.77)
-var ap_wt = (ap_elev - ap_depth).toFixed(2);
+var ap_wt = (0.7999 * wcbc_wt + 42.452).toFixed(2);
+var ap_depth = (ap_elev - ap_wt + 0.07).toFixed(2);
+
 
 //create markers for bossier wells and add info into popups
 var naa = L.marker([32.62255, -93.71567], {icon: yellowIcon}).bindPopup("<h6><b>North Airline Acres</b></h6><br><p>Elevation: 171.5 ft<br>Depth below surface: " + naa_depth + " ft<br>Water table elevation: " + naa_wt + " ft</p><br><a href='https://dr-maguigan.github.io/Northwest-LA-water/North-Airline-Acres.html#' target='_blank' rel='noopener noreferrer'>Historical Data</a>");
