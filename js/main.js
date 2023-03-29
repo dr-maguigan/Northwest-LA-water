@@ -193,7 +193,7 @@ var naa_depth = (naa_elev - naa_wt - 0.03).toFixed(2); //addition or subtraction
 	
 //belle rose at legacy
 var brl_elev = 168.8
-var brl_wt = (0.694 * wcbc_wt+ 52.419).toFixed(2);
+var brl_wt = (0.694 * wcbc_wt + 52.419).toFixed(2);
 var brl_depth = (brl_elev - brl_wt -0.06).toFixed(2);
 
 //north-south corridor
