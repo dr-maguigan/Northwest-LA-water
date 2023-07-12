@@ -183,7 +183,7 @@ var caddowells = L.layerGroup([wbj, hp, mr, kv, sc, wl, b, gw, ejp]);
 //create variables for bossier wells, later efforts will be to add ability to update telemetried wells continously and to derive calculations to estimate based on telemetried well levels
 //willow chute well
 var wcbc_elev = 168.46
-var wcbc_depth = (4.9 - 2.84).toFixed(2);
+var wcbc_depth = (7.0 - 2.84).toFixed(2);
 var wcbc_wt = (wcbc_elev - wcbc_depth).toFixed(2);
 
 //north airline acres
