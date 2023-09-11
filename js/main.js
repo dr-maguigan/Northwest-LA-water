@@ -19,28 +19,6 @@ redIcon.alt = "Caddo Well Marker";
 var greenIcon = new pinIcon({iconUrl: 'img/green_pin.png'})
 greenIcon.alt = "USGS Gage Marker";
 
-//create hosston marker, assign it green (USGS)
-var hosston = L.marker([32.89343195779419, -93.8208313147931], {icon: greenIcon});
-//create hlevel variable to accept JQuery return
-var hlevel;    
-//run AJAX to return latest gage levels for Hosston
-$.ajax({
-    	type: "GET",
-    	url: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07299540&parameterCd=00065&siteStatus=all", //USGS link where data are stored in JSON
-    	dataType: 'json',
-    	async: false, //run as synchronous
-    	data: $(this).serialize(),
-    	success: function(data) {
-        	hla = (data.value.timeSeries[0].values[0].value[0].value); //location within JSON where gage reading is
-		hlevel = Number(hla); //convert to number from string
-	}
-});
-
-//enter hosston elevation and hlevel to add to create water table level, add info to popup
-var hosston_elev = 151.27
-var hoss_wt = (hosston_elev + hlevel).toFixed(2);
-hosston.bindPopup("<h6><b>Red River near Hosston, LA</b></h6><br><p>Elevation: 151.27 ft<br>Gage height: " + hlevel + " ft<br>Stream elevation: " + hoss_wt + " ft</p><br><a href='https://waterdata.usgs.gov/monitoring-location/07344400/#parameterCode=00065&period=P7D' target='_blank' rel='noopener noreferrer'>Historical Data</a>");
-
 //repeat same steps for twelvemile bayou
 var tm = L.marker([32.64564664818235, -93.87746100527966], {icon: greenIcon});
 var tmlevel;
@@ -118,7 +96,7 @@ var rr_wt = (rr_elev + rrlevel).toFixed(2);
 rr.bindPopup("<h6><b>Red River at Shreveport</b></h6><br><p>Elevation: 131.48 ft<br>Gage height: " + rrlevel + " ft<br>Stream elevation: " + rr_wt + " ft</p><br><a href='https://waterdata.usgs.gov/monitoring-location/07348500/#parameterCode=00065&period=P7D' target='_blank' rel='noopener noreferrer'>Historical Data</a>");
 		
 //create layergroup for gages to add into layer control			
-var gages = L.layerGroup([hosston, tm, fr, wc, rr]);
+var gages = L.layerGroup([tm, fr, wc, rr]);
 
 //create variables for caddo well info to add to markers below, will be set up to retrieve continuous updating later	
 //walter b jacobs
@@ -261,7 +239,7 @@ var ap = L.marker([32.59875, -93.72445], {icon: yellowIcon}).bindPopup("<h6><b>A
 var bossierwells = L.layerGroup([naa, brl, nsc, frbc, wcbc, oc, rp, btc, sp, cb, kp, ap]);
 		
 //create layer with all layers in it for layer control
-var allLayers = L.layerGroup([hosston, tm, fr, wc, rr, wbj, hp, mr, kv, sc, wl, b, gw, ejp, naa, brl, nsc, frbc, wcbc, oc, rp, btc, sp, cb, kp, ap]);
+var allLayers = L.layerGroup([tm, fr, wc, rr, wbj, hp, mr, kv, sc, wl, b, gw, ejp, naa, brl, nsc, frbc, wcbc, oc, rp, btc, sp, cb, kp, ap]);
 
 //add map, have to create layers first and then map to add
 var map = L.map('map', {
@@ -271,7 +249,7 @@ var map = L.map('map', {
 });
 
 //create topright and bottom left points for fitbounds to help map on either desktop or mobile
-var tr = L.latLng(32.925, -93.69);
+var tr = L.latLng(32.665, -93.65);
 var bl = L.latLng(32.2725, -93.96);
 var bounds = L.latLngBounds(tr, bl);
 map.fitBounds(bounds);
