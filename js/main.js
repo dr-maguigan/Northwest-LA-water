@@ -161,47 +161,47 @@ var caddowells = L.layerGroup([wbj, hp, mr, kv, sc, wl, b, gw, ejp]);
 //create variables for bossier wells, later efforts will be to add ability to update telemetried wells continously and to derive calculations to estimate based on telemetried well levels
 //autumn place
 var ap_elev = 175.0
-var ap_wt = (ap_elev - ap_wt + 0.07).toFixed(2);
 var ap_depth = (-1.1839*wclevel + 6.1938).toFixed(2);
+var ap_wt = (ap_elev - ap_depth).toFixed(2);
 
 //north airline acres
 var naa_elev = 171.5
-var naa_depth = (1.0735*ap_wt - 0.5442).toFixed(2);
+var naa_depth = (1.0735*ap_depth - 0.5442).toFixed(2);
 var naa_wt = (naa_elev - naa_depth).toFixed(2);
 	
 //belle rose at legacy
 var brl_elev = 168.8
-var brl_depth = (0.8816*ap_wt + 1.3785).toFixed(2);
+var brl_depth = (0.8816*ap_depth + 1.3785).toFixed(2);
 var brl_wt = (brl_elev - brl_depth).toFixed(2);
 
 //north-south corridor
 var nsc_elev = 165.97
-var nsc_depth = (1.3807*ap_wt + 0.864).toFixed(2);
+var nsc_depth = (1.3807*ap_depth + 0.864).toFixed(2);
 var nsc_wt = (nsc_elev - nsc_depth).toFixed(2);
 
 //flat river well
 var frbc_elev = 168.06
-var frbc_depth = (1.241*naa_wt + 0.9424).toFixed(2);
+var frbc_depth = (1.241*naa_depth + 0.9424).toFixed(2);
 var frbc_wt = (frbc_elev - frbc_depth + 0.06).toFixed(2);
 
 //willow chute well
 var wcbc_elev = 168.46
-var wcbc_depth = (0.9654*naa_wt + 3.8146).toFixed(2);
+var wcbc_depth = (0.9654*naa_depth + 3.8146).toFixed(2);
 var wcbc_wt = (wcbc_elev - wcbc_depth).toFixed(2);
 			
 //oak creek well
 var oc_elev = 172.63
-var oc_depth = (1.1861*naa_wt + 2.1124).toFixed(2);
+var oc_depth = (1.1861*naa_depth + 2.1124).toFixed(2);
 var oc_wt = (oc_elev - oc_depth).toFixed(2);
 
 //rosedale place			
 var rp_elev = 171.3
-var rp_depth = (0.7671*naa_wt + 2.0752).toFixed(2);
+var rp_depth = (0.7671*naa_depth + 2.0752).toFixed(2);
 var rp_wt = (rp_elev - rp_depth).toFixed(2);
 
 //bossier tennis courts
 var btc_elev = 171.89
-var btc_depth = (1.5321*naa_wt + 3.1936).toFixed(2);
+var btc_depth = (1.5321*naa_depth + 3.1936).toFixed(2);
 var btc_wt = (btc_elev - btc_depth).toFixed(2);
 
 //sewage treatment plant
@@ -211,12 +211,12 @@ var sp_wt = (sp_elev - sp_depth).toFixed(2);
 
 //cypress bend
 var cb_elev = 175.79
-var cb_depth = (1.0836*naa_wt + 3.5231).toFixed(2);
+var cb_depth = (1.0836*naa_depth + 3.5231).toFixed(2);
 var cb_wt = (cb_elev - cb_depth).toFixed(2);
 
 //kingston plantation
 var kp_elev = 173.4
-var kp_depth = (0.906*ap_wt + 1.0315).toFixed(2);
+var kp_depth = (0.906*ap_depth + 1.0315).toFixed(2);
 var kp_wt = (kp_elev - kp_depth).toFixed(2);
 
 //create markers for bossier wells and add info into popups
