@@ -94,7 +94,21 @@ $.ajax({
 var rr_elev = 131.48
 var rr_wt = (rr_elev + rrlevel).toFixed(2);
 rr.bindPopup("<h6><b>Red River at Shreveport</b></h6><br><p>Elevation: 131.48 ft<br>Gage height: " + rrlevel + " ft<br>Stream elevation: " + rr_wt + " ft</p><br><a href='https://waterdata.usgs.gov/monitoring-location/07348500/#parameterCode=00065&period=P7D' target='_blank' rel='noopener noreferrer'>Historical Data</a>");
-		
+
+//create global variable for cypress bayou lake near benton for water level calculations
+var cbllevel;
+$.ajax({
+	type: "GET",
+	url: "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=07349815&parameterCd=00065&siteStatus=all",
+	dataType: 'json',
+	async: false,
+	data: $(this).serialize(),
+	success: function(data) {
+		cblla = (data.value.timeSeries[0].values[0].value[0].value);
+		cbllevel = Number(cblla);
+	}
+});
+
 //create layergroup for gages to add into layer control			
 var gages = L.layerGroup([tm, fr, wc, rr]);
 
@@ -158,50 +172,47 @@ var ejp = L.marker([32.2661755, -93.9404097], {icon: redIcon}).bindPopup("<h6><b
 //create layergroup for caddo wells for layer control
 var caddowells = L.layerGroup([wbj, hp, mr, kv, sc, wl, b, gw, ejp]);
 
-//create variables for bossier wells, later efforts will be to add ability to update telemetried wells continously and to derive calculations to estimate based on telemetried well levels
-//autumn place
-var ap_elev = 175.0
-var ap_depth = (-1.1839*wclevel + 6.1938).toFixed(2);
-var ap_wt = (ap_elev - ap_depth).toFixed(2);
+cbllevel
 
+//create variables for bossier wells, later efforts will be to add ability to update telemetried wells continously and to derive calculations to estimate based on telemetried well levels
 //north airline acres
 var naa_elev = 171.5
-var naa_depth = (1.0735*ap_depth - 0.5442).toFixed(2);
+var naa_depth = (-1.292591404*wclevel + 0.556870789*frlevel - 2.31163418*cbllevel + 25.78212601).toFixed(2);
 var naa_wt = (naa_elev - naa_depth).toFixed(2);
 	
 //belle rose at legacy
 var brl_elev = 168.8
-var brl_depth = (0.8816*ap_depth + 1.3785).toFixed(2);
+var brl_depth = (-0.86576*wclevel + 0.246668*frlevel - 1.09624*cbllevel + 15.57705).toFixed(2);
 var brl_wt = (brl_elev - brl_depth).toFixed(2);
 
 //north-south corridor
 var nsc_elev = 165.97
-var nsc_depth = (1.3807*ap_depth + 0.864).toFixed(2);
+var nsc_depth = (-1.26616*wclevel + 0.692145854*frlevel - 2.89644*cbllevel).toFixed(2);
 var nsc_wt = (nsc_elev - nsc_depth).toFixed(2);
 
 //flat river well
 var frbc_elev = 168.06
-var frbc_depth = (1.241*naa_depth + 0.9424).toFixed(2);
+var frbc_depth = (-3.222011693*wclevel - 0.550480223*frlevel + 0.474553845*cbllevel + 34.22609334).toFixed(2);
 var frbc_wt = (frbc_elev - frbc_depth + 0.06).toFixed(2);
 
 //willow chute well
 var wcbc_elev = 168.46
-var wcbc_depth = (0.9654*naa_depth + 3.8146).toFixed(2);
+var wcbc_depth = (0.348050164*naa_depth - 0.543267043*brl_depth + 0.505634648*nsc_depth + 0.108567288*frbc_depth + 0.266097898*oc_depth -0.112844275*kp_depth - 0.188269029*ap_depth + 4.217633536).toFixed(2);
 var wcbc_wt = (wcbc_elev - wcbc_depth).toFixed(2);
 			
 //oak creek well
 var oc_elev = 172.63
-var oc_depth = (1.1861*naa_depth + 2.1124).toFixed(2);
+var oc_depth = (-1.319334902*wclevel + 0.428728892*frlevel - 2.086020446*cbllevel + 27.11437067).toFixed(2);
 var oc_wt = (oc_elev - oc_depth).toFixed(2);
 
 //rosedale place			
 var rp_elev = 171.3
-var rp_depth = (0.7671*naa_depth + 2.0752).toFixed(2);
+var rp_depth = (-0.364437168*naa_depth - 0.411413872*brl_depth + 1.01114715*nsc_depth + 1.577871105).toFixed(2);
 var rp_wt = (rp_elev - rp_depth).toFixed(2);
 
 //bossier tennis courts
 var btc_elev = 171.89
-var btc_depth = (1.5321*naa_depth + 3.1936).toFixed(2);
+var btc_depth = (0.461742695*naa_depth - 1.015161371*brl_depth + 1.628941645*nsc_depth + 2.330020014).toFixed(2);
 var btc_wt = (btc_elev - btc_depth).toFixed(2);
 
 //sewage treatment plant
@@ -211,13 +222,18 @@ var sp_wt = (sp_elev - sp_depth).toFixed(2);
 
 //cypress bend
 var cb_elev = 175.79
-var cb_depth = (1.0836*naa_depth + 3.5231).toFixed(2);
+var cb_depth = (0.357267174*naa_depth - 0.62924346*brl_depth + 0.997259267*nsc_depth + 3.115912033).toFixed(2);
 var cb_wt = (cb_elev - cb_depth).toFixed(2);
 
 //kingston plantation
 var kp_elev = 173.4
-var kp_depth = (0.906*ap_depth + 1.0315).toFixed(2);
+var kp_depth = (-0.987068789*wclevel + 0.212199722*frlevel - 1.145728905*cbllevel + 16.40781716).toFixed(2);
 var kp_wt = (kp_elev - kp_depth).toFixed(2);
+
+//autumn place
+var ap_elev = 175.0
+var ap_depth = (-1.498861957*wclevel + 0.48760322*frlevel - 1.459560945*cbllevel + 18.76322498).toFixed(2);
+var ap_wt = (ap_elev - ap_depth).toFixed(2);
 
 //create markers for bossier wells and add info into popups
 var naa = L.marker([32.62255, -93.71567], {icon: yellowIcon}).bindPopup("<h6><b>North Airline Acres</b></h6><br><p>Elevation: 171.5 ft<br>Depth below surface: " + naa_depth + " ft<br>Water table elevation: " + naa_wt + " ft</p><br><a href='https://dr-maguigan.github.io/Northwest-LA-water/North-Airline-Acres.html#' target='_blank' rel='noopener noreferrer'>Historical Data</a>");
