@@ -202,12 +202,12 @@ var oc_wt = (oc_elev - oc_depth).toFixed(2);
 
 //rosedale place			
 var rp_elev = 171.3
-var rp_depth = (-0.364437168*naa_depth - 0.411413872*brl_depth + 1.01114715*nsc_depth + 1.577871105).toFixed(2);
+var rp_depth = (-0.364437168*naa_depth - 0.411413872*brl_depth + 1.01114715*nsc_depth - 1.577871105).toFixed(2);
 var rp_wt = (rp_elev - rp_depth).toFixed(2);
 
 //bossier tennis courts
 var btc_elev = 171.89
-var btc_depth = (0.461742695*naa_depth - 1.015161371*brl_depth + 1.628941645*nsc_depth + 2.330020014).toFixed(2);
+var btc_depth = (0.461742695*naa_depth - 1.015161371*brl_depth + 1.628941645*nsc_depth - 2.330020014).toFixed(2);
 var btc_wt = (btc_elev - btc_depth).toFixed(2);
 
 //sewage treatment plant
@@ -217,7 +217,7 @@ var sp_wt = (sp_elev - sp_depth).toFixed(2);
 
 //cypress bend
 var cb_elev = 175.79
-var cb_depth = (0.357267174*naa_depth - 0.62924346*brl_depth + 0.997259267*nsc_depth + 3.115912033).toFixed(2);
+var cb_depth = (0.357267174*naa_depth - 0.62924346*brl_depth + 0.997259267*nsc_depth - 3.115912033).toFixed(2);
 var cb_wt = (cb_elev - cb_depth).toFixed(2);
 
 //kingston plantation
@@ -232,7 +232,7 @@ var ap_wt = (ap_elev - ap_depth).toFixed(2);
 
 //willow chute well
 var wcbc_elev = 168.46
-var wcbc_depth = (0.348050164*naa_depth - 0.543267043*brl_depth + 0.505634648*nsc_depth + 0.108567288*frbc_depth + 0.266097898*oc_depth -0.112844275*kp_depth - 0.188269029*ap_depth + 4.217633536).toFixed(2);
+var wcbc_depth = (0.348050164*naa_depth - 0.543267043*brl_depth + 0.505634648*nsc_depth + 0.108567288*frbc_depth + 0.266097898*oc_depth -0.112844275*kp_depth - 0.188269029*ap_depth - 4.217633536).toFixed(2);
 var wcbc_wt = (wcbc_elev - wcbc_depth).toFixed(2);
 
 //create markers for bossier wells and add info into popups
