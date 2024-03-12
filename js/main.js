@@ -202,7 +202,7 @@ var oc_wt = (oc_elev - oc_depth).toFixed(2);
 
 //rosedale place			
 var rp_elev = 171.3
-var rp_depth = ((-0.364437168*naa_depth - 0.411413872*brl_depth + 1.01114715*nsc_depth - 1.577871105*-1).toFixed(2);
+var rp_depth = ((-0.364437168*naa_depth - 0.411413872*brl_depth + 1.01114715*nsc_depth - 1.577871105)*-1).toFixed(2);
 var rp_wt = (rp_elev - rp_depth).toFixed(2);
 
 //bossier tennis courts
