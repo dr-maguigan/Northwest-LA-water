@@ -53,6 +53,12 @@ $.ajax({
 	}
 });
 
+if (frlevel = -999999) {
+  frlevel = 4;
+} else {
+  frlevel = frlevel;
+}
+
 var fr_elev = 139.66
 var fr_wt = (fr_elev + frlevel).toFixed(2);
 fr.bindPopup("<h6><b>Flat River near Shed Rd near Bossier City</b></h6><br><p>Elevation: 139.66 ft<br>Gage height: " + frlevel + " ft<br>Stream elevation: " + fr_wt + " ft</p><br><a href='https://waterdata.usgs.gov/monitoring-location/07349298/#parameterCode=00065&period=P7D' target='_blank' rel='noopener noreferrer'>Historical Data</a>");
@@ -71,6 +77,12 @@ $.ajax({
 		wclevel = Number(wcla);
 	}
 });
+
+if (wclevel = -999999) {
+  wclevel = 2;
+} else {
+  wclevel = wclevel;
+}
 
 var wc_elev = 157.44
 var wc_wt = (wc_elev + wclevel).toFixed(2);
