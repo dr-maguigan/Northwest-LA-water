@@ -219,7 +219,7 @@ var rp_wt = (rp_elev - rp_depth).toFixed(2);
 
 //bossier tennis courts
 var btc_elev = 171.89
-var btc_depth = ((0.461742695*naa_depth - 1.015161371*brl_depth + 1.628941645*nsc_depth - 2.330020014)*-1).toFixed(2);
+var btc_depth = ((0.461742695*naa_depth - 1.015161371*brl_depth + 1.628941645*nsc_depth - 2.330020014)*1).toFixed(2);
 var btc_wt = (btc_elev - btc_depth).toFixed(2);
 
 //sewage treatment plant
