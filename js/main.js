@@ -217,7 +217,7 @@ var sp_wt = (sp_elev - sp_depth).toFixed(2);
 
 //cypress bend
 var cb_elev = 175.79
-var cb_depth = ((0.357267174*naa_depth - 0.62924346*brl_depth + 0.997259267*nsc_depth - 3.115912033)*-1).toFixed(2);
+var cb_depth = ((0.357267174*naa_depth - 0.62924346*brl_depth + 0.997259267*nsc_depth - 3.115912033)).toFixed(2);
 var cb_wt = (cb_elev - cb_depth).toFixed(2);
 
 //kingston plantation
