@@ -115,47 +115,47 @@ var gages = L.layerGroup([tm, fr, wc, rr]);
 //create variables for caddo well info to add to markers below, will be set up to retrieve continuous updating later	
 //walter b jacobs
 var wbj_elev = 204.9
-var wbj_depth = (14 - 2.27).toFixed(2);
+var wbj_depth = (14.6 - 2.27).toFixed(2);
 var wbj_wt = (wbj_elev - wbj_depth).toFixed(2); //calculate water table elevation
 
 //hannahs park
 var hp_elev = 199.36
-var hp_depth = (62.8 - 2.36).toFixed(2);
+var hp_depth = (65.58 - 2.36).toFixed(2);
 var hp_wt = (hp_elev - hp_depth).toFixed(2);
 
 //mayo road
 var mr_elev = 193.5
-var mr_depth = (81.6 - 2.46).toFixed(2);
+var mr_depth = (80.1 - 2.46).toFixed(2);
 var mr_wt = (mr_elev - mr_depth).toFixed(2);
 
 //keithville
 var kv_elev = 197.44
-var kv_depth = (74.1 -2.63).toFixed(2);
+var kv_depth = (74.3 -2.63).toFixed(2);
 var kv_wt = (kv_elev - kv_depth).toFixed(2);
 
 //south camp
 var sc_elev = 279.35
-var sc_depth = (28.2 - 2.77).toFixed(2);
+var sc_depth = (29.8 - 2.77).toFixed(2);
 var sc_wt = (sc_elev - sc_depth).toFixed(2);
 
 //wallace lake
 var wl_elev = 161.51
-var wl_depth = (22.2 -3.2).toFixed(2);
+var wl_depth = (23.8 -3.2).toFixed(2);
 var wl_wt = (wl_elev - wl_depth).toFixed(2);
 
 //blanchard
 var b_elev = 226.75
-var b_depth = (7.5 - 3.46).toFixed(2);
+var b_depth = (8.1 - 3.46).toFixed(2);
 var b_wt = (b_elev - b_depth).toFixed(2);
 
 //greenwood
 var gw_elev = 264.15
-var gw_depth = (52 - 3.61).toFixed(2);
+var gw_depth = (53.8 - 3.61).toFixed(2);
 var gw_wt = (gw_elev - gw_depth).toFixed(2);
 
 //eddie jones park
 var ejp_elev = 247.99
-var ejp_depth = (12.6 - 3.31).toFixed(2);
+var ejp_depth = (13.1 - 3.31).toFixed(2);
 var ejp_wt = (ejp_elev - ejp_depth).toFixed(2);
 			
 //create markers and add in data for popups
