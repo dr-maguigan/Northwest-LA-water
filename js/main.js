@@ -188,7 +188,7 @@ var frbc_depth = (frbc_elev - frbc_wt).toFixed(2);
 //oak creek well
 var oc_elev = 172.63
 var oc_wt = (0.9442*wcbc_wt + 24.357).toFixed(2);
-var oc_depth = (oc_elev - wt).toFixed(2);
+var oc_depth = (oc_elev - oc_wt).toFixed(2);
 
 //rosedale place			
 var rp_elev = 171.3
