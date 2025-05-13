@@ -162,7 +162,7 @@ var caddowells = L.layerGroup([wbj, hp, mr, kv, sc, wl, b, gw, ejp]);
 //willow chute well
 var wc_wt2 = wc_wt ?? 2;
 var wcbc_elev = 168.46
-var wcbc_wt = ((2.845 * (wc_wt2 ** 4)) - (1828.1 * (wc_wt2 ** 3)) + (440489 * (wc_wt2 ** 2)) - (5e7 * wc_wt2) + 2e9).toFixed(2);
+var wcbc_wt = (0.6547*wc_wt2 + 56.155).toFixed(2);
 var wcbc_depth = (wcbc_elev - wcbc_wt).toFixed(2);
 
 //north airline acres
