@@ -165,40 +165,40 @@ var wcbc_elev = 168.46
 var wcbc_wt = (0.6547*wc_wt2 + 56.155).toFixed(2);
 var wcbc_depth = (wcbc_elev - wcbc_wt).toFixed(2);
 
+//bossier tennis courts
+var btc_elev = 171.89
+var btc_wt = (1.0441*wcbc_wt - 4.6154).toFixed(2);
+var btc_depth = (btc_elev - btc_wt).toFixed(2);
+
 //north airline acres
 var naa_elev = 171.5
-var naa_wt = (0.8164*wcbc_wt + 45.801).toFixed(2);
+var naa_wt = (0.6854*btc_wt + 56.164).toFixed(2);
 var naa_depth = (naa_elev - naa_wt).toFixed(2);
 	
 //belle rose at legacy
 var brl_elev = 168.8
-var brl_wt = (0.5985*wcbc_wt +73.7).toFixed(2);
+var brl_wt = (0.5126*btc_wt + 79.647).toFixed(2);
 var brl_depth = (brl_elev - brl_wt).toFixed(2);
 
 //north-south corridor
 var nsc_elev = 165.97
-var nsc_wt = (1.304*wcbc_wt - 35.174).toFixed(2);
+var nsc_wt = (1.1087*btc_wt - 20.895).toFixed(2);
 var nsc_depth = (nsc_elev - nsc_wt).toFixed(2);
 
 //flat river well
 var frbc_elev = 168.06
-var frbc_wt = (0.948*wcbc_wt - 35.174).toFixed(2);
+var frbc_wt = (0.7922*wcbc_wt + 33.27).toFixed(2);
 var frbc_depth = (frbc_elev - frbc_wt).toFixed(2);
 
 //oak creek well
 var oc_elev = 172.63
-var oc_wt = (0.9442*wcbc_wt + 24.357).toFixed(2);
+var oc_wt = (0.8037*btc_wt + 34.477).toFixed(2);
 var oc_depth = (oc_elev - oc_wt).toFixed(2);
 
 //rosedale place			
 var rp_elev = 171.3
-var rp_wt = (0.6514*wcbc_wt + 68.617).toFixed(2);
+var rp_wt = (0.558*btc_wt + 75.07).toFixed(2);
 var rp_depth = (rp_elev - rp_wt).toFixed(2);
-
-//bossier tennis courts
-var btc_elev = 171.89
-var btc_wt = (1.0441*wcbc_wt + 6.8908).toFixed(2);
-var btc_depth = (btc_elev - btc_wt).toFixed(2);
 
 //sewage treatment plant
 var sp_elev = 176.9
@@ -207,17 +207,17 @@ var sp_wt = (sp_elev - sp_depth).toFixed(2);
 
 //cypress bend
 var cb_elev = 175.79
-var cb_wt = (0.7038*wcbc_wt + 63.048).toFixed(2);
+var cb_wt = (0.6156*btc_wt + 67.936).toFixed(2);
 var cb_depth = (cb_elev - cb_wt).toFixed(2);
 
 //kingston plantation
 var kp_elev = 173.4
-var kp_wt = (0.7131*wcbc_wt + 62.161).toFixed(2);
+var kp_wt = (0.6041*btc_wt + 70.319).toFixed(2);
 var kp_depth = (kp_elev - kp_wt).toFixed(2);
 
 //autumn place
 var ap_elev = 175.0
-var ap_wt = (0.7473*wcbc_wt +58.747).toFixed(2);
+var ap_wt = (0.6104*btc_wt + 71.001).toFixed(2);
 var ap_depth = (ap_elev - ap_wt).toFixed(2);
 
 //create markers for bossier wells and add info into popups
