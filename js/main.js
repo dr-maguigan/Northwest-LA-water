@@ -172,7 +172,13 @@ var btc_depth = (btc_elev - btc_wt).toFixed(2);
 
 //north airline acres
 var naa_elev = 171.5
-var naa_wt = (0.6854*btc_wt + 56.164).toFixed(2);
+//use 2 equations based on Willow Chute levels
+let naa_wt;
+if (wc_reading < 155) {
+  naa_wt = (0.9207 * wcbc_wt - 4.6136).toFixed(2);
+} else {
+  naa_wt = (0.8296 * wcbc_wt + 34.712).toFixed(2);
+}
 var naa_depth = (naa_elev - naa_wt).toFixed(2);
 	
 //belle rose at legacy
