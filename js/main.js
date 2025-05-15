@@ -208,7 +208,7 @@ var oc_depth = (oc_elev - oc_wt).toFixed(2);
 
 //rosedale place			
 var rp_elev = 171.3
-var rp_wt = (0.558*btc_wt + 75.07).toFixed(2);
+var rp_wt = (0.4804*btc_wt + 87.997).toFixed(2);
 var rp_depth = (rp_elev - rp_wt).toFixed(2);
 
 //sewage treatment plant
@@ -218,17 +218,17 @@ var sp_wt = (sp_elev - sp_depth).toFixed(2);
 
 //cypress bend
 var cb_elev = 175.79
-var cb_wt = (0.6156*btc_wt + 67.936).toFixed(2);
+var cb_wt = (0.6295*btc_wt + 65.631).toFixed(2);
 var cb_depth = (cb_elev - cb_wt).toFixed(2);
 
 //kingston plantation
 var kp_elev = 173.4
-var kp_wt = (0.6041*btc_wt + 70.319).toFixed(2);
+var kp_wt = (0.4895*btc_wt + 89.249).toFixed(2);
 var kp_depth = (kp_elev - kp_wt).toFixed(2);
 
 //autumn place
 var ap_elev = 175.0
-var ap_wt = (0.6104*btc_wt + 71.001).toFixed(2);
+var ap_wt = (0.5266*btc_wt + 84.93).toFixed(2);
 var ap_depth = (ap_elev - ap_wt).toFixed(2);
 
 //create markers for bossier wells and add info into popups
