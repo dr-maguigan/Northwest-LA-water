@@ -167,14 +167,19 @@ var wcbc_depth = (wcbc_elev - wcbc_wt).toFixed(2);
 
 //bossier tennis courts
 var btc_elev = 171.89
-var btc_wt = (1.0441*wcbc_wt - 4.6154).toFixed(2);
+let btc_wt;
+if (wcbc_wt < 155) {
+  btc_wt = (1.4194 * wcbc_wt - 50.208).toFixed(2);
+} else {
+  btc_wt = (1.0441 * wcbc_wt - 4.6154).toFixed(2);
+}
 var btc_depth = (btc_elev - btc_wt).toFixed(2);
 
 //north airline acres
 var naa_elev = 171.5
 //use 2 equations based on Willow Chute levels
 let naa_wt;
-if (wc_reading < 155) {
+if (wcbc_wt < 155) {
   naa_wt = (0.9207 * wcbc_wt - 4.6136).toFixed(2);
 } else {
   naa_wt = (0.8296 * wcbc_wt + 34.712).toFixed(2);
@@ -183,22 +188,22 @@ var naa_depth = (naa_elev - naa_wt).toFixed(2);
 	
 //belle rose at legacy
 var brl_elev = 168.8
-var brl_wt = (0.5126*btc_wt + 79.647).toFixed(2);
+var brl_wt = (0.3949*btc_wt + 99.554).toFixed(2);
 var brl_depth = (brl_elev - brl_wt).toFixed(2);
 
 //north-south corridor
 var nsc_elev = 165.97
-var nsc_wt = (1.1087*btc_wt - 20.895).toFixed(2);
+var nsc_wt = (.8875*btc_wt + 15.394).toFixed(2);
 var nsc_depth = (nsc_elev - nsc_wt).toFixed(2);
 
 //flat river well
 var frbc_elev = 168.06
-var frbc_wt = (0.7922*wcbc_wt + 33.27).toFixed(2);
+var frbc_wt = (0.7643*wcbc_wt + 38.109).toFixed(2);
 var frbc_depth = (frbc_elev - frbc_wt).toFixed(2);
 
 //oak creek well
 var oc_elev = 172.63
-var oc_wt = (0.8037*btc_wt + 34.477).toFixed(2);
+var oc_wt = (0.6691*btc_wt + 56.959).toFixed(2);
 var oc_depth = (oc_elev - oc_wt).toFixed(2);
 
 //rosedale place			
